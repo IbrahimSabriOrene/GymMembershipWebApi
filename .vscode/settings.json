@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "CQRS",
+        "firstname",
+        "lastname",
+        "Mapster",
+        "Mediat"
+    ],
+    "editor.suggest.showStatusBar": true,
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.activityBar.visible": true,
+    "dotnet.defaultSolution": "MemberInfoApplication.sln"
+}

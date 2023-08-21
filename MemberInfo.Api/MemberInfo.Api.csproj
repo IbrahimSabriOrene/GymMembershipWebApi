@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>48f64e6d-5dfd-452c-a923-fe1285452adf</UserSecretsId>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\MemberInfo.Contracts\MemberInfo.Contracts.csproj" />
+    <ProjectReference Include="..\MemberInfo.Application\MemberInfo.Application.csproj" />
+    <ProjectReference Include="..\MemberInfo.Infrastructure\MemberInfo.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="1.2.1" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
+    <PackageReference Include="MediaTR" Version="12.1.1" />
+  </ItemGroup>
+
+</Project>
