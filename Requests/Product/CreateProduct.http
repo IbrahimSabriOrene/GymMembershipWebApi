@@ -1,0 +1,15 @@
+@host = https://localhost:7140
+@personId = 1
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YmRjMGZmNi1kYzMwLTRkZTAtODY5NS02NTFlZDAyZThjZjUiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI0NGE5Y2Q1YS0yMjkyLTQxOTItYjMzMC0zNzI3YzJiMDdiMjUiLCJleHAiOjE2OTI2NjE0MzQsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.9bWiGhRmTG3bWl_W8NKrgwV4_RCAXG2-3jIHxPQA-q8
+
+POST https://localhost:7140/persons/{{personId}}/products
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "Id": "1",
+    "ProductName": "Product 1",
+    "Price": "100",
+    "months": 12,
+    "PersonIds": "2"
+}

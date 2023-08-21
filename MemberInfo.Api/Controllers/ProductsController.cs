@@ -1,14 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MemberInfo.Contracts.Products;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace MemberInfo.Api.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
+[Route("persons/{personId}/products")]
 public class ProductsController : ApiController
 {
+    [HttpPost]
+
+    public IActionResult CreateProduct(
+        string personId,
+        CreateProductRequest request
+    ){
+        return Ok(request);
+    }
     
 }
