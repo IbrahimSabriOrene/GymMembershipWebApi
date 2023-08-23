@@ -21,4 +21,12 @@ public sealed class Price : ValueObject
         yield return Amount;
         yield return Currency;
     }
+
+    public static Price Create(int amount, string currency)
+    {
+        // Purpose: Creates a new instance of the 'Price' value object.
+        // Usage: Used to create a new instance of the 'Price' value object.
+
+        return new Price(amount, currency);
+    }
 }

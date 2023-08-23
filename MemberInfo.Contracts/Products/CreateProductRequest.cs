@@ -2,9 +2,8 @@ namespace MemberInfo.Contracts.Products;
 
 public record CreateProductRequest
 (
-    string Id,
     string ProductName,
-    string Price,
+    List<Prices> Price,
     int Months,
-    string PersonIds
+    List<ProductIds> PersonIds
 );
