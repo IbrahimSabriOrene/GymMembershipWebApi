@@ -21,6 +21,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             // We have to get the person's id from the database, but we don't have access to the database here.
             //Lets make it work for now
             // We are gonna implement the user's guid id to the personId.
-        return default;
+        return default!;
     }
 }
