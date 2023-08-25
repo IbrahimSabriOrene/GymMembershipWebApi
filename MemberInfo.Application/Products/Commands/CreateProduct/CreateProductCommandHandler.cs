@@ -14,9 +14,10 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             productName: request.ProductName,
             prices: request.Price.ConvertAll(x => Price.Create(x.Amount, x.Currency)).ToList(),
             months: request.Months,
-            personIds: request.PersonIdList.ConvertAll(x => PersonId.CreateUnique(request.PersonIds)).ToList()); // This part has to take the person's id from the database.
+            personIds: request.PersonIdList.ConvertAll(x => PersonId.CreateUnique(x.Id)) // Problem: PersonIdList can not be null, but it is null.
+            );
             
-            //Problem: PersonIdList can not be null, but it is null.
+
             //Possible way to do this: Change createUnique to create and pass the person's id as a parameter.
 
             //Problems with the above line:
