@@ -14,11 +14,12 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             productName: request.ProductName,
             prices: request.Price.ConvertAll(x => Price.Create(x.Amount, x.Currency)).ToList(),
             months: request.Months,
-            personIds: request.PersonIds.ConvertAll(x => PersonId.CreateUnique()).ToList());
+            personIds: request.PersonIdList.ConvertAll(x => PersonId.CreateUnique(request.PersonIds)).ToList()); // This part has to take the person's id from the database.
+            
+            //Problem: PersonIdList can not be null, but it is null.
+            //Possible way to do this: Change createUnique to create and pass the person's id as a parameter.
 
             //Problems with the above line:
-            // We are creating the Person's id inside the Product's domain, which is not correct.
-            // We have to get the person's id from the database, but we don't have access to the database here.
             //Lets make it work for now
             // We are gonna implement the user's guid id to the personId.
         return default!;

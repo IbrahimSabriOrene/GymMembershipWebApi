@@ -49,7 +49,7 @@ public sealed class Person : AggregateRoot<PersonId>
         DateTime? expirationDate,
         ProductId productId)
     {
-        var personId = PersonId.CreateUnique();
+        var personId = PersonId.CreateUnique(personId: Guid.NewGuid());
         return new Person(
             personId: personId,
             firstName: firstName,

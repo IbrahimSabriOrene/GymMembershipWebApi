@@ -3,13 +3,13 @@ namespace MemberInfo.Contracts.Products;
 
 public record ProductResponse
 (
-    string ProductId,
+    Guid ProductId,
     string ProductName,
     List<Prices> Price,
     int Months,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    List<ProductIds> PersonIds
+    List<PersonIds> PersonIds
 );
 
 
@@ -20,8 +20,8 @@ public record Prices
 
 );
 
-public record ProductIds
+public record PersonIds
 (
     Guid Id
 );
-
+//Compare this snippet from MemberInfo.Application\Products\Queries\GetProduct\GetProductQueryHandler.cs:
