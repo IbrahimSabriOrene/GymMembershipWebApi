@@ -1,19 +1,19 @@
 @host = https://localhost:7140
 @personId = cd3e5fc5-2a88-44fd-aed6-095965df4635
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YTU0ZmE4Yi02MTEzLTQ0NjYtYmI1OC1hNWE2ZTNjMGJhNmUiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI5NDAyMzM1Yi0yYmQwLTQ0OWItOTNlOC02YTk4ZjJiMmUxMTEiLCJleHAiOjE2OTMwNjA2NzgsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.nNQRwei7odEObs-7mNby5c0wGjRi0Lm5ICFkidN0zMU
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMjNlYzczMS1jNjgwLTRlMTEtOWYyYy02NDAxOWIxNmJjMDQiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiIxOTA2Mzg3OS03ZGEzLTQyOGItYjg2My01Mjk1NzczNmM0ZGUiLCJleHAiOjE2OTMwODU5MDAsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.xYzJg6dFGgVWkPED-AQkJglyNjGML0umKglODNHdfpA
 
 POST https://localhost:7140/persons/{{personId}}/products
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "ProductName": "Sample eqweqProduct",
+  "ProductName": "hola",
   "Price": [
     {
-      "Amount": 1132130,  
+      "Amount": 123 ,  
       "Currency": "TRY"
     }
   ],
-  "Months": 6
+  "Months": "12"
 
 }
