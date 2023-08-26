@@ -13,8 +13,8 @@ namespace MemberInfo.Domain.Products
         public DateTime CreationDate { get; }
         public DateTime? LastUpdateDate { get; }
 
-        private readonly List<PersonId> _personIds = new();
-        public IReadOnlyCollection<PersonId> PersonIds => _personIds.ToList();
+        private readonly List<PersonId> _personId = new();
+        public IReadOnlyCollection<PersonId> PersonId => _personId.ToList();
 
         public Product(
             ProductId productId,
@@ -30,16 +30,16 @@ namespace MemberInfo.Domain.Products
             Months = months;
             CreationDate = creationDate;
             LastUpdateDate = lastUpdateDate;
-            _personIds.AddRange(personIds);
+            _personId.AddRange(personIds);
         }
 
         public static Product Create(
             string productName,
-            List<Price> prices,
+            List<Price> prices, // price is null somehow
             int months,
             List<PersonId> personIds)
         {
-            var productId = ProductId.CreateUnique();
+            var productId = ProductId.CreateUnique(); // This is the only place where we create a new ProductId
             return new Product(
                 productId,
                 productName,
