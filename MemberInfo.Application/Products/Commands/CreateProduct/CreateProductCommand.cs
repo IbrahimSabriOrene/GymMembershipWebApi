@@ -8,7 +8,7 @@ public record CreateProductCommand(
     string ProductName,
     List<Prices> Price,
     int Months,
-    List<PersonIds> PersonIdList
+    List<PersonIds> PersonIds //null
 ): IRequest<ErrorOr<Product>>;
 
 
