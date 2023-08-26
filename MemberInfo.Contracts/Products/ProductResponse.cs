@@ -3,13 +3,14 @@ namespace MemberInfo.Contracts.Products;
 
 public record ProductResponse
 (
-    Guid ProductId,
+    Guid ProductId,  // Product Response not mapped correctly 
     string ProductName,
     List<Prices> Price,
     int Months,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    List<PersonIds> PersonIds
+    List<PersonId> PersonId
+
 );
 
 
@@ -20,7 +21,7 @@ public record Prices
 
 );
 
-public record PersonIds
+public record PersonId
 (
     Guid Id
 );
