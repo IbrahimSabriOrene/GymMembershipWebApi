@@ -1,6 +1,6 @@
 @host = https://localhost:7140
-@personId = 2aa81134-6c16-4901-97f5-d6009a8d45f2
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYWE4MTEzNC02YzE2LTQ5MDEtOTdmNS1kNjAwOWE4ZDQ1ZjIiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiJhODcwNmYwZS04M2FjLTQzOGYtOGE1Yy0zNmIyNTU5MjQwMTciLCJleHAiOjE2OTI5ODE1OTAsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.C_Iu1kYixZHCr6LBvaJK1CjdoESimXjeucdFvGWaPZo
+@personId = cd3e5fc5-2a88-44fd-aed6-095965df4635
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWRjN2I0NC1iNmM2LTQwMjYtODAyMS0wMjc1YmZlMjM0MzEiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiIzZmFkNjZjZS0wNGQ0LTQ0NzktOWJiOS00NmYzMDYwMzNlMjUiLCJleHAiOjE2OTMwNTY2MDIsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.2KMR01WPQmHYqThdHpW_7TA5u18qOPUd46ctfZzETgI
 
 POST https://localhost:7140/persons/{{personId}}/products
 Content-Type: application/json
@@ -10,10 +10,15 @@ Authorization: Bearer {{token}}
   "ProductName": "Sample Product",
   "Price": [
     {
-      "Amount": 100,
-      "Currency": "USD"
+      "Amount": 1132130,  
+      "Currency": "TRY"
     }
   ],
   "Months": 6,
-  "PersonIds": "2aa81134-6c16-4901-97f5-d6009a8d45f2"
+  "PersonIds": [
+    {
+      "Id": "cd3e5fc5-2a88-44fd-aed6-095965df4635"
+    }
+  ]
+
 }
