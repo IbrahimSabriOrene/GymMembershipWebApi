@@ -9,7 +9,7 @@ public record ProductResponse
     int Months,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    List<PersonId> PersonId
+    Guid PersonId
 
 );
 
@@ -21,8 +21,4 @@ public record Prices
 
 );
 
-public record PersonId
-(
-    Guid Id
-);
 //Compare this snippet from MemberInfo.Application\Products\Queries\GetProduct\GetProductQueryHandler.cs:

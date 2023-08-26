@@ -21,9 +21,9 @@ public class ProductsController : ApiController
 
     [HttpPost]
 
-    public async Task<IActionResult> CreateProduct(CreateProductRequest request)
+    public async Task<IActionResult> CreateProduct(CreateProductRequest request, Guid personId)
     {
-        var command = _mapper.Map<CreateProductCommand>(request);
+        var command = _mapper.Map<CreateProductCommand>((request , personId));
         var CreateProductResult = await _mediator.Send(command);
         return CreateProductResult.Match(
             product => Ok(_mapper.Map<ProductResponse>(product)),

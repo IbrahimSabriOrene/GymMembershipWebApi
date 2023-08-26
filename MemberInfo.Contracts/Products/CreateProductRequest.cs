@@ -4,8 +4,7 @@ public record CreateProductRequest
 (
     string ProductName,
     List<Prices> Price,
-    int Months,
-    List<PersonId> PersonIds
+    int Months
 );
 
 //Request only has one PersonId, but the command has a list of PersonIds.

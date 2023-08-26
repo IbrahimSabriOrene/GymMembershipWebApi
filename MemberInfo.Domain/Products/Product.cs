@@ -13,8 +13,7 @@ namespace MemberInfo.Domain.Products
         public DateTime CreationDate { get; }
         public DateTime? LastUpdateDate { get; }
 
-        private readonly List<PersonId> _personId = new();
-        public IReadOnlyCollection<PersonId> PersonId => _personId.ToList();
+        public PersonId PersonId { get; }
 
         public Product(
             ProductId productId,
@@ -23,21 +22,21 @@ namespace MemberInfo.Domain.Products
             int months,
             DateTime creationDate,
             DateTime lastUpdateDate,
-            List<PersonId> personIds) : base(productId)
+            PersonId personIds) : base(productId)
         {
             ProductName = productName;
             Prices = prices;
             Months = months;
             CreationDate = creationDate;
             LastUpdateDate = lastUpdateDate;
-            _personId.AddRange(personIds);
+            PersonId = personIds;
         }
 
         public static Product Create(
             string productName,
             List<Price> prices, // price is null somehow
             int months,
-            List<PersonId> personIds)
+            PersonId personIds)
         {
             var productId = ProductId.CreateUnique(); // This is the only place where we create a new ProductId
             return new Product(

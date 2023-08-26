@@ -21,9 +21,11 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         await Task.CompletedTask;
         var product = Product.Create(
             productName: request.ProductName,
-            prices: request.Price.ConvertAll(x => Price.Create(x.Amount, x.Currency)),
+            prices: request.Price.Select(property => Price.Create(
+                property.Amount,
+                property.Currency)).ToList(),
             months: request.Months,
-            personIds: request.PersonIds.ConvertAll(x => PersonId.CreateUnique(x.Id))// Problem: PersonIdList can not be null, but it is null.
+            personIds: PersonId.CreateUnique(request.PersonId)// Problem: PersonIdList can not be null, but it is null.
             );
 
             _productRepository.Add(product);

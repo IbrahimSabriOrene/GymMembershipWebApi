@@ -20,3 +20,12 @@ GetPersonId-> Turn it into ListOfPerson, like record it as list of person.
 
 I should do the mapping correctly.
 Also somehow list of persons is still NULL, I should fix this.
+
+
+Change personId's location.
+PersonId.CreateUnique has to take list of personId, not just personId.
+
+personId: PersonId.CreateUnique(request.PersonId)
+request.PersonId is list of personId, not just personId.
+
+request.PersonId.Select(personId => PersonId.CreateUnique(personId)).ToList()
