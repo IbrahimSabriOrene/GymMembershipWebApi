@@ -25,7 +25,10 @@ public class ProductsController : ApiController
     {
         var command = _mapper.Map<CreateProductCommand>(request);
         var CreateProductResult = await _mediator.Send(command);
-        return Ok(CreateProductResult);
+        return CreateProductResult.Match(
+            product => Ok(_mapper.Map<ProductResponse>(product)),
+            error => Problem(error)
+            );
     }
 
 }
