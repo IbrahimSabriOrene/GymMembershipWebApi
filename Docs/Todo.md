@@ -15,3 +15,8 @@ But the personId is not the same as the userId
 Also the personId is not become List of PersonId
 
 GetPersonId-> Turn it into ListOfPerson, like record it as list of person.
+
+
+
+I should do the mapping correctly.
+Also somehow list of persons is still NULL, I should fix this.
