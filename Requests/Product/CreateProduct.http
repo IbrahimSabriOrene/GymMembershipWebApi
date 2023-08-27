@@ -1,19 +1,14 @@
-@host = https://localhost:7140
-@personId = cd3e5fc5-2a88-44fd-aed6-095965df4635
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMjNlYzczMS1jNjgwLTRlMTEtOWYyYy02NDAxOWIxNmJjMDQiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiIxOTA2Mzg3OS03ZGEzLTQyOGItYjg2My01Mjk1NzczNmM0ZGUiLCJleHAiOjE2OTMwODU5MDAsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.xYzJg6dFGgVWkPED-AQkJglyNjGML0umKglODNHdfpA
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmQzMzM5ZC1iYTlmLTQ4NzYtOGRlMi01ODgzNmYzOGQyZDkiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiJkYTdhYzY2ZC03ZjVhLTRlZWUtYTMwNS1hYTBmNDRjZDdiMjkiLCJleHAiOjE2OTMxNzI0MTEsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.bT-sJqHDhYKt96XzeoGgDspzaP-4TdEjFdYXdwSxOaU
 
-POST https://localhost:7140/persons/{{personId}}/products
+@host = https://localhost:7140
+@id = 80d65efb-8a8e-46cc-b886-74112cdf2de8
+POST {{host}}/api/v1/product
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
-{
-  "ProductName": "hola",
-  "Price": [
-    {
-      "Amount": 123 ,  
-      "Currency": "TRY"
-    }
-  ],
-  "Months": "12"
 
+{
+    "ProductName" : "3 months",
+    "Months" : 3,
+    "Price" : 300.0
 }

@@ -1,11 +1,16 @@
 {
     "cSpell.words": [
+        "blazor",
         "bruh",
+        "Coyier's",
         "CQRS",
         "firstname",
+        "HSTS",
         "lastname",
         "Mapster",
-        "Mediat"
+        "Mediat",
+        "styl",
+        "Webfont"
     ],
     "editor.suggest.showStatusBar": true,
     "workbench.activityBar.iconClickBehavior": "focus",
