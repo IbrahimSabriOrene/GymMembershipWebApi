@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using MemberInfo.Application.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Entities;
 
-namespace MemberInfo.Infrastructure.Persistence;
+namespace MemberInfo.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {

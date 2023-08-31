@@ -21,6 +21,9 @@ public abstract class AggregateRoot<TId> : Entity<TId>
         // Usage: Typically, 'AggregateRoot' represents an entity at the root of an aggregate in domain-driven design.
         // It extends the functionality of the 'Entity' class for such root entities.
     }
+    protected AggregateRoot(){
+
+    }
 }
 
 

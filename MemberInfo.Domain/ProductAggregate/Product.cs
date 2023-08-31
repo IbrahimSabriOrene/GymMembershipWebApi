@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MemberInfo.Domain.Models;
 using MemberInfo.Domain.ProductAggregate.ValueObjects;
 
@@ -9,12 +5,12 @@ namespace MemberInfo.Domain.ProductAggregate;
 
 public sealed class Product : AggregateRoot<ProductId>
 {
-    public string ProductName { get; }
-    public int Months { get; }
-    public decimal Price { get; }
+    public string ProductName { get; private set; }
+    public int Months { get; private set; }
+    public decimal Price { get; private set; }
 
-
-    public Product(
+    // Existing constructor
+    private Product(
         ProductId id,
         string productName,
         int months,
@@ -25,18 +21,23 @@ public sealed class Product : AggregateRoot<ProductId>
         Price = price;
     }
     
+    // EF Core parameterless constructor
+    public Product() 
+    {
+    }
 
     public static Product Create(
         string productName,
         int months,
         decimal price)
     {
-        var productId = ProductId.Create();
         return new Product(
-            productId,
+            ProductId.Create(),
             productName,
             months,
             price);
     }
-    
 }
+
+    
+

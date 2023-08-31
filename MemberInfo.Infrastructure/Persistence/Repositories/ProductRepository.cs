@@ -5,15 +5,20 @@ using System.Threading.Tasks;
 using MemberInfo.Application.Common.Interfaces.Persistence;
 using MemberInfo.Domain.ProductAggregate;
 
-namespace MemberInfo.Infrastructure.Persistence;
+namespace MemberInfo.Infrastructure.Persistence.Repositories;
 
 public class ProductRepository : IProductRepository
 {
-    private static readonly List<Product> _products = new();
+    private readonly MemberInfoDbContext _context;
 
+    public ProductRepository(MemberInfoDbContext context)
+    {
+        _context = context;
+    }
 
     public void Add(Product product)
     {
-        _products.Add(product);
+        _context.Add(product);
+        _context.SaveChanges();
     }
 }

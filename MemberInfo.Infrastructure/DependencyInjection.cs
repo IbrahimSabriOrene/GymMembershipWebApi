@@ -4,8 +4,10 @@ using MemberInfo.Application.Common.Interfaces.Persistence;
 using MemberInfo.Application.Common.Interfaces.Services;
 using MemberInfo.Infrastructure.Authentication;
 using MemberInfo.Infrastructure.Persistence;
+using MemberInfo.Infrastructure.Persistence.Repositories;
 using MemberInfo.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -25,8 +27,12 @@ public static class DependencyInjection
     }
     public static IServiceCollection AddPersistence(this IServiceCollection services)
     {
+        services.AddDbContext<MemberInfoDbContext>(options =>
+        options.UseSqlServer("Server=localhost;Database=MemberInfo;User Id=sa;Password=MyBigPassword123;Encrypt=false"));
+
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
+
     
         return services;
 
