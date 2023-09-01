@@ -1,9 +1,5 @@
-
-using ErrorOr;
 using FluentValidation;
 using MediatR;
-using MemberInfo.Application.Authentication.Commands.Register;
-using MemberInfo.Application.Authentication.Common;
 using MemberInfo.Application.Common.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 namespace MemberInfo.Application;

@@ -1,6 +1,6 @@
 using ErrorOr;
 using MediatR;
-using MemberInfo.Application.Common.Interfaces.Persistence;
+using MemberInfo.Domain.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Person.ValueObjects;
 using MemberInfo.Domain.Products;
 using MemberInfo.Domain.Products.ValueObjects;

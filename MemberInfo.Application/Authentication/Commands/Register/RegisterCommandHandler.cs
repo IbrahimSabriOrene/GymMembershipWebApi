@@ -1,9 +1,9 @@
 using ErrorOr;
 using MediatR;
 using MemberInfo.Application.Authentication.Common;
-using MemberInfo.Application.Common.Interfaces.Authentication;
-using MemberInfo.Application.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Common.Errors;
+using MemberInfo.Domain.Common.Interfaces.Authentication;
+using MemberInfo.Domain.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Entities;
 
 namespace MemberInfo.Application.Authentication.Commands.Register;
