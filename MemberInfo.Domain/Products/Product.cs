@@ -32,6 +32,11 @@ namespace MemberInfo.Domain.Products
             PersonId = personIds;
         }
 
+        public DateTime GetExpirationDate()
+        {
+            return CreationDate.AddMonths(Months);
+        }
+
         public static Product Create(
             string productName,
             List<Price> prices, // price is null somehow
