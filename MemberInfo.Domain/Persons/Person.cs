@@ -1,3 +1,4 @@
+using MemberInfo.Domain.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Models;
 using MemberInfo.Domain.Person.ValueObjects;
 using MemberInfo.Domain.Products;
@@ -7,14 +8,17 @@ namespace MemberInfo.Domain.Person;
 
 public sealed class Person : AggregateRoot<PersonId>
 {
-    public string FirstName { get; }
-    public string LastName { get; }
-    public string Email { get; }
-    public string PhoneNumber { get; }
-    public DateTime? CreationDate { get; }
-    public DateTime? LastUpdateDate { get; }
-    public DateTime? ExpirationDate { get; }
-    public ProductId ProductId { get; }
+    private readonly IProductRepository _productRepository;
+
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public string Email { get; private set; }
+    public string PhoneNumber { get; private set; }
+    public DateTime? CreationDate { get; private set; }
+    public DateTime? LastUpdateDate { get; private set; }
+    public DateTime? ExpirationDate { get; private set; }
+    public ProductId ProductId { get; private set; }
+    public IProductRepository productRepository1 { get; private set; } = null!;
 
     public Person(
         PersonId personId,
@@ -25,7 +29,8 @@ public sealed class Person : AggregateRoot<PersonId>
         DateTime creationDate,
         DateTime? lastUpdateDate,
         DateTime? expirationDate,
-        ProductId productId
+        ProductId productId,
+        IProductRepository productRepository
        
        ) : base(personId)
     {
@@ -37,9 +42,11 @@ public sealed class Person : AggregateRoot<PersonId>
         LastUpdateDate = lastUpdateDate;
         ExpirationDate = expirationDate;
         ProductId = productId;
+        _productRepository = productRepository;
         
     }
-  
+    
+
 
     public static Person Create(
         string firstName,
@@ -47,10 +54,11 @@ public sealed class Person : AggregateRoot<PersonId>
         string email,
         string phoneNumber,
         DateTime? expirationDate,
-        ProductId productId)
+        ProductId productId,
+        IProductRepository productRepository)
     {
         var personId = PersonId.CreateUnique(Guid.NewGuid()); // We are creating the guid id in here this is not good 
-        return new Person(
+        var person = new Person(
             personId: personId,
             firstName: firstName,
             lastName: lastName,
@@ -59,20 +67,25 @@ public sealed class Person : AggregateRoot<PersonId>
             creationDate: DateTime.UtcNow,
             lastUpdateDate: DateTime.UtcNow,
             expirationDate: expirationDate,
-            productId: productId
+            productId: productId,
+            productRepository: productRepository
             );
+
+            person.UpdateExpirationDate();
+        
+
+        return person;
+    }
+     public void UpdateExpirationDate() 
+    {
+        Product product = _productRepository.FindById(ProductId);
+        DateTime expirationDate = product.GetExpirationDate();
+        this.ExpirationDate = expirationDate;
+
     }
 
+    
 
 
     
 }
-
-// POST /api/v1/Persons/PersonId
-
-// we must find a way to make persons and product share same status
-// okay i found the way, remove status from products, and add it to person
-// also remove expiration date from product and add it to person
-// this way we can make sure that only the person has the expiration instead of package,
-// by doing that we can have a lot of persons with same product, but different expiration date
-// how to get the expiration date of the product?
