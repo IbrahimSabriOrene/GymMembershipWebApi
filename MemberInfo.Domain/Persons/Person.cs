@@ -18,7 +18,7 @@ public sealed class Person : AggregateRoot<PersonId>
     public DateTime? LastUpdateDate { get; private set; }
     public DateTime? ExpirationDate { get; private set; }
     public ProductId ProductId { get; private set; }
-    public IProductRepository productRepository1 { get; private set; } = null!;
+    public IProductRepository ProductRepository { get; private set; } = null!;
 
     public Person(
         PersonId personId,
@@ -46,7 +46,13 @@ public sealed class Person : AggregateRoot<PersonId>
         
     }
     
+    public void UpdateExpirationDate() 
+    {
+        Product? product = _productRepository.FindById(ProductId);
+        DateTime? expirationDate = product?.GetExpirationDate();
+        this.ExpirationDate = expirationDate;
 
+    }
 
     public static Person Create(
         string firstName,
@@ -57,6 +63,7 @@ public sealed class Person : AggregateRoot<PersonId>
         ProductId productId,
         IProductRepository productRepository)
     {
+        
         var personId = PersonId.CreateUnique(Guid.NewGuid()); // We are creating the guid id in here this is not good 
         var person = new Person(
             personId: personId,
@@ -76,13 +83,7 @@ public sealed class Person : AggregateRoot<PersonId>
 
         return person;
     }
-     public void UpdateExpirationDate() 
-    {
-        Product product = _productRepository.FindById(ProductId);
-        DateTime expirationDate = product.GetExpirationDate();
-        this.ExpirationDate = expirationDate;
-
-    }
+    
 
     
 
