@@ -11,5 +11,5 @@ public interface IProductRepository
 {
     void Add(Product product);
     
-    Product FindById(ProductId productId);
+    Product? FindById(ProductId productId);
 }
