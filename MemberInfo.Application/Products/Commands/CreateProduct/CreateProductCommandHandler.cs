@@ -4,6 +4,7 @@ using MemberInfo.Domain.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Person.ValueObjects;
 using MemberInfo.Domain.Products;
 using MemberInfo.Domain.Products.ValueObjects;
+using MemberInfo.Domain.Common.Errors;
 
 namespace MemberInfo.Application.Products.Commands.CreateProduct;
 
@@ -19,6 +20,8 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     public async Task<ErrorOr<Product>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
+        
+
         var product = Product.Create(
             productName: request.ProductName,
             prices: request.Price.Select(property => Price.Create(
@@ -27,6 +30,16 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             months: request.Months,
             personIds: PersonId.CreateUnique(request.PersonId)// Problem: PersonIdList can not be null, but it is null.
             );
+
+        if(product is null)
+        {
+            return Errors.NullReference.ProductNotFound("Product not found");
+        }
+        if (product.Id is null)
+        {
+            return Errors.NullReference.ProductNotFound("Product not found");
+        }
+            
 
             _productRepository.Add(product);
 
