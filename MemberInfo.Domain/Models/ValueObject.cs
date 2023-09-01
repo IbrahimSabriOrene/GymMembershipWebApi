@@ -26,21 +26,21 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
     }
 
-    public static bool operator ==(ValueObject left, ValueObject right)
-    {
-        // Purpose: Overloads the '==' operator to enable equality comparison of value objects.
-        // Usage: Allows comparing two value objects for equality using the '==' operator.
+    public static bool operator ==(ValueObject? left, ValueObject? right)
+{
+    if (left is null && right is null)
+        return true;
 
-        return Equals(left, right);
-    }
+    if (left is null || right is null)
+        return false;
 
-    public static bool operator !=(ValueObject left, ValueObject right)
-    {
-        // Purpose: Overloads the '!=' operator to enable inequality comparison of value objects.
-        // Usage: Allows comparing two value objects for inequality using the '!=' operator.
+    return left.Equals(right);
+}
 
-        return !Equals(left, right);
-    }
+public static bool operator !=(ValueObject? left, ValueObject? right)
+{
+    return !(left == right);
+}
 
     public override int GetHashCode()
     {
