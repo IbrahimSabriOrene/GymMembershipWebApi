@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MemberInfo.Application.Common.Interfaces.Persistence;
+using MemberInfo.Domain.Common.Interfaces.Persistence;
 using MemberInfo.Domain.Products;
 
 namespace MemberInfo.Infrastructure.Persistence;

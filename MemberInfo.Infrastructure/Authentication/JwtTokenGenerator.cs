@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
-using MemberInfo.Application.Common.Interfaces.Authentication;
-using MemberInfo.Application.Common.Interfaces.Services;
+using MemberInfo.Domain.Common.Interfaces.Authentication;
+using MemberInfo.Domain.Common.Interfaces.Services;
 using MemberInfo.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

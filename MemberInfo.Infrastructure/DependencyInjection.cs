@@ -1,7 +1,7 @@
 using System.Text;
-using MemberInfo.Application.Common.Interfaces.Authentication;
-using MemberInfo.Application.Common.Interfaces.Persistence;
-using MemberInfo.Application.Common.Interfaces.Services;
+using MemberInfo.Domain.Common.Interfaces.Authentication;
+using MemberInfo.Domain.Common.Interfaces.Persistence;
+using MemberInfo.Domain.Common.Interfaces.Services;
 using MemberInfo.Infrastructure.Authentication;
 using MemberInfo.Infrastructure.Persistence;
 using MemberInfo.Infrastructure.Services;
