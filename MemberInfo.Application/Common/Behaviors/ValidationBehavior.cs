@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ErrorOr;
 using FluentValidation;
 using MediatR;
-using MemberInfo.Application.Authentication.Commands.Register;
-using MemberInfo.Application.Authentication.Common;
 
 namespace MemberInfo.Application.Common.Behaviors;
 
