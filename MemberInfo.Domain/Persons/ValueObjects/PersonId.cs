@@ -11,11 +11,17 @@ public sealed class PersonId : ValueObject
         Value = value;
     }
 
-    public static PersonId CreateUnique(Guid value){
+    public static PersonId CreateUnique(){
         
-        return new PersonId(value);
+        return new PersonId(Guid.NewGuid());
  
     }
+
+    public static PersonId Create(Guid value)
+    {
+        return new PersonId(value);
+    }
+
 
     public override IEnumerable<object> GetEqualityComponents()
     {
