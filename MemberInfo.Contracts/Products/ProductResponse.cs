@@ -9,7 +9,7 @@ public record ProductResponse
     int Months,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    Guid PersonId
+    HashSet<PersonIds> PersonId
 
 );
 
@@ -21,4 +21,8 @@ public record Prices
 
 );
 
+public record PersonIds
+(
+    Guid Id
+);
 //Compare this snippet from MemberInfo.Application\Products\Queries\GetProduct\GetProductQueryHandler.cs:
