@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MemberInfo.Api.Controllers;
 
-[Route("persons/{personId}/products")]
+[Route("/products")]
 public class ProductsController : ApiController
 {
 
@@ -21,7 +21,18 @@ public class ProductsController : ApiController
 
     [HttpPost]
 
-    public async Task<IActionResult> CreateProduct(CreateProductRequest request, Guid personId)
+    public async Task<IActionResult> CreateProduct(CreateProductRequest request)
+    {
+        var command = _mapper.Map<CreateProductCommand>(request);
+        var CreateProductResult = await _mediator.Send(command);
+        return CreateProductResult.Match(
+            product => Ok(_mapper.Map<ProductResponse>(product)),
+            error => Problem(error)
+            );
+    }
+    
+
+    /* public async Task<IActionResult> AssignProductById(CreateProductRequest request, Guid personId)
     {
         var command = _mapper.Map<CreateProductCommand>((request , personId));
         var CreateProductResult = await _mediator.Send(command);
@@ -29,6 +40,5 @@ public class ProductsController : ApiController
             product => Ok(_mapper.Map<ProductResponse>(product)),
             error => Problem(error)
             );
-    }
-
+    } */
 }
