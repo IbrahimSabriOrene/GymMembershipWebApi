@@ -17,10 +17,7 @@ Authorization: Bearer {{token}}
   "Months": "12",
   "PersonIds": [
     {
-      "id": "cd3e5fc5-2a88-44fd-aed6-095965df4635"
-    },
-    {
-      "id": "cd3e5fc5-2a88-44fd-aed6-095965df4635"
+      "id": "cd3eefc5-2a58-44fd-aed6-095965df4635"
     }
   ]
 }
