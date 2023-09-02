@@ -8,7 +8,7 @@ public record ProductResponse
     List<Prices> Price,
     int Months,
     DateTime CreationDate,
-    DateTime? LastUpdateDate,
+    DateTime LastUpdateDate,
     HashSet<PersonIds> PersonId
 
 );
