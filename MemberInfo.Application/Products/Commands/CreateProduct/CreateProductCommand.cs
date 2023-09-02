@@ -6,14 +6,18 @@ namespace MemberInfo.Application.Products.Commands.CreateProduct;
 
 public record CreateProductCommand(
     string ProductName,
-    List<Prices> Price,
+    List<PricesCommand> Price,
     int Months,
-    Guid PersonId //null
+    HashSet<PersonIdsCommand> PersonIds //This place gonna change.
 ): IRequest<ErrorOr<Product>>;
 
 
-public record Prices (
+public record PricesCommand (
     int Amount,
     string Currency
+);
+
+public record PersonIdsCommand(
+    Guid Id
 );
 
