@@ -20,6 +20,8 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     public async Task<ErrorOr<Product>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
+
+        var  personIds = request.PersonIds.Select(property => PersonId.Create(property.Id)).ToHashSet();
         
 
         var product = Product.Create(
@@ -28,7 +30,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
                 property.Amount,
                 property.Currency)).ToList(),
             months: request.Months,
-            personIds: PersonId.CreateUnique(request.PersonId)// Problem: PersonIdList can not be null, but it is null.
+            personIds: personIds  // This will change soon.
             );
 
         if(product is null)
