@@ -64,7 +64,7 @@ public sealed class Person : AggregateRoot<PersonId>
         IProductRepository productRepository)
     {
         
-        var personId = PersonId.CreateUnique(Guid.NewGuid()); // We are creating the guid id in here this is not good 
+        var personId = PersonId.CreateUnique(); // We are creating the guid id in here this is not good 
         var person = new Person(
             personId: personId,
             firstName: firstName,
