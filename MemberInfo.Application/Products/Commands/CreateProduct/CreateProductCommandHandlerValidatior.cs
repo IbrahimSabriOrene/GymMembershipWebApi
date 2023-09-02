@@ -13,6 +13,5 @@ public class CreateProductCommandHandlerValidatior : AbstractValidator<CreatePro
         RuleFor(x => x.ProductName).NotEmpty().WithMessage("Product Name is required");
         RuleFor(x => x.Price).NotEmpty().WithMessage("Price is required");
         RuleFor(x => x.Months).NotEmpty().WithMessage("Months is required");
-        RuleFor(x => x.PersonId).NotEmpty().WithMessage("PersonId is required");
     }
 }
