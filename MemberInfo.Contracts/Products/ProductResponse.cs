@@ -23,6 +23,5 @@ public record Prices
 
 public record PersonIds
 (
-    Guid Id
+    Guid Id // PersonIds not mapped correctly
 );
-//Compare this snippet from MemberInfo.Application\Products\Queries\GetProduct\GetProductQueryHandler.cs:
