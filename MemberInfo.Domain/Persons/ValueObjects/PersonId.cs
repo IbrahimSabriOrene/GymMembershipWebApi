@@ -4,7 +4,7 @@ namespace MemberInfo.Domain.Person.ValueObjects;
 
 public sealed class PersonId : ValueObject
 {
-    public Guid Value { get ;}
+    public Guid Value { get ; private set;}
     
     public PersonId(Guid value)
     {
