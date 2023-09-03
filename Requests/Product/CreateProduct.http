@@ -1,6 +1,6 @@
 @host = https://localhost:7140
 @personId = cd3e5fc5-2a88-44fd-aed6-095965df4635
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzN2I1NmQ2NC0zMDlkLTQwZDEtOTZhMy1iMDI4MTcyMjgyN2QiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiJlNWMyZDllOC1lZjAyLTQ5YzctYjRhZi0xNThjYThjNzE2NzMiLCJleHAiOjE2OTM2MjM0NzYsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.r9wKQTnB1LWqRRIBHreAywIepwVv_hUzrB1g15ZWEik
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ZThkOTFiOC02ZTdmLTQwMTQtYWE3YS05MzNlMzQ4ODBjNzYiLCJnaXZlbl9uYW1lIjoiMTIzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI0ZTYwNzI0Yi01MWFjLTQ3NjctYTcwNC1mM2U3YjFkMmI3ZTUiLCJleHAiOjE2OTM3NzQyNTYsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.0_4_W5THDpivbGNtGUAuiqY8RoJkrhsh8mAkIknDt2U
 
 POST https://localhost:7140/products
 Content-Type: application/json
@@ -17,7 +17,13 @@ Authorization: Bearer {{token}}
   "Months": "12",
   "PersonIds": [
     {
-      "id": "cd3eefc5-2a58-44fd-aed6-095965df4635"
+      "id": "ad34e3c5-2a58-44fd-aed6-095965df4635"
+    },
+    {
+      "id": "ad32e3c5-2a58-44fd-aed6-095965df4635"
+    },
+    {
+      "id": "ad34e3c5-2a58-44fd-aed6-095965df4635"
     }
   ]
 }
