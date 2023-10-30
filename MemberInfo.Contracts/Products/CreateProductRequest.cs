@@ -1,4 +1,4 @@
-namespace MemberInfo.Contracts.Products;
+namespace Customer.Contracts.Products;
 
 public record CreateProductRequest
 (
@@ -6,7 +6,19 @@ public record CreateProductRequest
     List<Prices> Price,
     int Months,
     HashSet<PersonIds> PersonIds
-);//Make personId nullable
-
+);
+//Make personId nullable
 //Request only has one PersonId, but the command has a list of PersonIds.
 // we are coming here but im not use why the personId is not being passed in personIdList as return
+
+public record Prices
+(
+    int Amount,
+    string Currency
+
+);
+
+public record PersonIds
+(
+    Guid Id // PersonIds not mapped correctly
+);

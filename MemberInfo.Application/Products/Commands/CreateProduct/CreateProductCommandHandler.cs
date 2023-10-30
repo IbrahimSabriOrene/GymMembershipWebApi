@@ -1,12 +1,12 @@
 using ErrorOr;
 using MediatR;
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Person.ValueObjects;
-using MemberInfo.Domain.Products;
-using MemberInfo.Domain.Products.ValueObjects;
-using MemberInfo.Domain.Common.Errors;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Person.ValueObjects;
+using Customer.Domain.Products;
+using Customer.Domain.Products.ValueObjects;
+using Customer.Domain.Common.Errors;
 
-namespace MemberInfo.Application.Products.Commands.CreateProduct;
+namespace Customer.Application.Products.Commands.CreateProduct;
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ErrorOr<Product>>
 {
@@ -21,8 +21,8 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     {
         await Task.CompletedTask;
 
-        var  personIds = request.PersonIds.Select(property => PersonId.Create(property.Id)).ToHashSet();
-        
+        var personIds = request.PersonIds.Select(property => PersonId.Create(property.Id)).ToHashSet();
+
 
         var product = Product.Create(
             productName: request.ProductName,
@@ -33,7 +33,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             personIds: personIds  // This will change soon.
             );
 
-        if(product is null)
+        if (product is null)
         {
             return Errors.NullReference.ProductNotFound("Product not found");
         }
@@ -41,18 +41,18 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         {
             return Errors.NullReference.ProductNotFound("Product not found");
         }
-            
 
-            _productRepository.Add(product);
 
-          //what we could do=> PersonId.CreateUnique(request.PersonId.Id) but if we do this we are only passing one personId.
-            
+        _productRepository.Add(product);
 
-            //Possible way to do this: Change createUnique to create and pass the person's id as a parameter.
+        //what we could do=> PersonId.CreateUnique(request.PersonId.Id) but if we do this we are only passing one personId.
 
-            //Problems with the above line:
-            //Lets make it work for now
-            // We are gonna implement the user's guid id to the personId.
+
+        //Possible way to do this: Change createUnique to create and pass the person's id as a parameter.
+
+        //Problems with the above line:
+        //Lets make it work for now
+        // We are gonna implement the user's guid id to the personId.
         return product;
     }
 }

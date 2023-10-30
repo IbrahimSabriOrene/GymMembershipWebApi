@@ -1,12 +1,12 @@
 using System.Diagnostics;
 using ErrorOr;
-using MemberInfo.Api.Common.Http;
+using Customer.Api.Common.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace MemberInfo.Api.Common.Errors;
+namespace Customer.Api.Common.Errors;
 
 internal sealed class CustomProblemDetailsFactory : ProblemDetailsFactory
 {
@@ -96,7 +96,7 @@ internal sealed class CustomProblemDetailsFactory : ProblemDetailsFactory
             problemDetails.Extensions[HttpErrorTypes.Errors] = errors?.Select(e => e.Code).ToList();
         }
 
-        
+
 
     }
 }

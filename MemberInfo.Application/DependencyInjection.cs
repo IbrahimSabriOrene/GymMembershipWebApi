@@ -1,8 +1,8 @@
 using FluentValidation;
 using MediatR;
-using MemberInfo.Application.Common.Behaviors;
+using Customer.Application.Common.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
-namespace MemberInfo.Application;
+namespace Customer.Application;
 
 public static class DependencyInjection
 {
@@ -13,5 +13,5 @@ public static class DependencyInjection
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddValidatorsFromAssemblies(new[] { typeof(DependencyInjection).Assembly });
         return services;
-    }       
+    }
 }

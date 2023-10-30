@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MemberInfo.Domain.Entities;
+namespace Customer.Domain.Entities;
 
-public class User
+public class
+User
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string FirstName { get; set; } = null!;

@@ -1,20 +1,21 @@
 using ErrorOr;
-using MemberInfo.Domain.Common.Errors;
-using MemberInfo.Domain.Models;
+using Customer.Domain.Common.Errors;
+using Customer.Domain.Models;
 
-namespace MemberInfo.Domain.Products.ValueObjects;
+namespace Customer.Domain.Products.ValueObjects;
 
 public sealed class ProductId : ValueObject
 {
-    public Guid Value { get ; private set;}
-    
+    public Guid Value { get; private set; }
+
     public ProductId(Guid value)
     {
 
         Value = value;
     }
 
-    public static ProductId CreateUnique(){
+    public static ProductId CreateUnique()
+    {
 
         return new(Guid.NewGuid());
     }
@@ -23,5 +24,5 @@ public sealed class ProductId : ValueObject
         yield return Value;
     }
 
-    
+
 }

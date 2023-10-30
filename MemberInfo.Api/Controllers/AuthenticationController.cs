@@ -1,14 +1,14 @@
-using MemberInfo.Contracts.Authentication;
+using Customer.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using MemberInfo.Application.Authentication.Commands.Register;
-using MemberInfo.Application.Authentication.Common;
-using MemberInfo.Application.Authentication.Queries.Login;
+using Customer.Application.Authentication.Commands.Register;
+using Customer.Application.Authentication.Common;
+using Customer.Application.Authentication.Queries.Login;
 using MapsterMapper;
 using ErrorOr;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MemberInfo.Api.Controllers;
+namespace Customer.Api.Controllers;
 
 [Route("auth")]
 [AllowAnonymous]
@@ -27,7 +27,7 @@ public class AuthenticationController : ApiController
     public async Task<IActionResult> Register(RegisterRequest request)
     {
         var command = _mapper.Map<RegisterCommand>(request);
-        ErrorOr<AuthenticationResult> registerResult = await _mediator.Send(command);
+        ErrorOr<CustomerResult> registerResult = await _mediator.Send(command);
 
         return registerResult.Match(
             registerResult => Ok(_mapper.Map<AuthenticationResponse>(registerResult)),
@@ -40,7 +40,7 @@ public class AuthenticationController : ApiController
     {
 
         var query = _mapper.Map<LoginQuery>(request);
-        ErrorOr<AuthenticationResult> loginResult = await _mediator.Send(query);
+        ErrorOr<CustomerResult> loginResult = await _mediator.Send(query);
         return loginResult.Match(
             loginResult => Ok(_mapper.Map<AuthenticationResponse>(loginResult)),
             error => Problem(error)

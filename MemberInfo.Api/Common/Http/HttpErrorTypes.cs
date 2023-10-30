@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MemberInfo.Api.Common.Http;
+namespace Customer.Api.Common.Http;
 
 public static class HttpErrorTypes
 {

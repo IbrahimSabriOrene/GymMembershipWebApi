@@ -1,8 +1,8 @@
-using MemberInfo.Api.Common.Errors;
-using MemberInfo.Api.Common.Mapping;
+using Customer.Api.Common.Errors;
+using Customer.Api.Common.Mapping;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
-namespace MemberInfo.Api;
+namespace Customer.Api;
 
 public static class DependencyInjection
 {
@@ -11,7 +11,7 @@ public static class DependencyInjection
         //services.AddControllers(options => options.Filters.Add<ErrorsHandlingFeatureAttribute>());
         services.AddControllers();
         services.AddMappings();
-        services.AddSingleton<ProblemDetailsFactory , CustomProblemDetailsFactory>();
-       return services;
+        services.AddSingleton<ProblemDetailsFactory, CustomProblemDetailsFactory>();
+        return services;
     }
 }

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MemberInfo.Api.Controllers;
+namespace Customer.Api.Controllers;
 
 [Route("/error")]
 public class ErrorsController : ControllerBase

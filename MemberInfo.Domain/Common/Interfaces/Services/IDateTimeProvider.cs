@@ -1,4 +1,4 @@
-namespace MemberInfo.Domain.Common.Interfaces.Services;
+namespace Customer.Domain.Common.Interfaces.Services;
 
 public interface IDateTimeProvider
 {

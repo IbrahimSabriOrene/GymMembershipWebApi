@@ -1,10 +1,11 @@
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Models;
-using MemberInfo.Domain.Person.ValueObjects;
-using MemberInfo.Domain.Products;
-using MemberInfo.Domain.Products.ValueObjects;
+using System.Globalization;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Models;
+using Customer.Domain.Person.ValueObjects;
+using Customer.Domain.Products;
+using Customer.Domain.Products.ValueObjects;
 
-namespace MemberInfo.Domain.Person;
+namespace Customer.Domain.Person;
 
 public sealed class Person : AggregateRoot<PersonId>
 {
@@ -31,7 +32,7 @@ public sealed class Person : AggregateRoot<PersonId>
         DateTime? expirationDate,
         ProductId productId,
         IProductRepository productRepository
-       
+
        ) : base(personId)
     {
         FirstName = firstName;
@@ -43,14 +44,16 @@ public sealed class Person : AggregateRoot<PersonId>
         ExpirationDate = expirationDate;
         ProductId = productId;
         _productRepository = productRepository;
-        
+
     }
-    
-    public void UpdateExpirationDate() 
+
+    public DateTime? UpdateExpirationDate(DateTime date)
     {
         Product? product = _productRepository.FindById(ProductId);
-        DateTime? expirationDate = product?.GetExpirationDate();
+        DateTime? expirationDate = product?.GetExpirationDate(date);
         this.ExpirationDate = expirationDate;
+
+        return this.ExpirationDate;
 
     }
 
@@ -59,11 +62,9 @@ public sealed class Person : AggregateRoot<PersonId>
         string lastName,
         string email,
         string phoneNumber,
-        DateTime? expirationDate,
         ProductId productId,
         IProductRepository productRepository)
     {
-        
         var personId = PersonId.CreateUnique(); // We are creating the guid id in here this is not good 
         var person = new Person(
             personId: personId,
@@ -71,22 +72,25 @@ public sealed class Person : AggregateRoot<PersonId>
             lastName: lastName,
             email: email,
             phoneNumber: phoneNumber,
-            creationDate: DateTime.UtcNow,
+            creationDate: DateTime.UtcNow, // This should be change.
             lastUpdateDate: DateTime.UtcNow,
-            expirationDate: expirationDate,
+            expirationDate: null,
             productId: productId,
             productRepository: productRepository
             );
 
-            person.UpdateExpirationDate();
-        
+        person.UpdateExpirationDate(DateTime.UtcNow); //This is not valid way to do this. May not work
+
 
         return person;
     }
-    
 
-    
+    // We can make it like a choice of months. 1 through 12.
+    // There is a problem about this.
 
 
-    
+
+
+
+
 }

@@ -2,7 +2,7 @@ using ErrorOr;
 using FluentValidation;
 using MediatR;
 
-namespace MemberInfo.Application.Common.Behaviors;
+namespace Customer.Application.Common.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> :
  IPipelineBehavior<TRequest, TResponse>
@@ -11,19 +11,19 @@ public class ValidationBehavior<TRequest, TResponse> :
 {
     private readonly IValidator<TRequest>? _validator;
 
-    public ValidationBehavior(IValidator<TRequest>? validator  = null)
+    public ValidationBehavior(IValidator<TRequest>? validator = null)
     {
         _validator = validator;
     }
 
-  
+
 
     public async Task<TResponse> Handle(
         TRequest request,
         RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
 
-    {   
+    {
         if (_validator == null)
         {
             return await next();

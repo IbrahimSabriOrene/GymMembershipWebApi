@@ -1,7 +1,7 @@
-using MemberInfo.Domain.Entities;
+using Customer.Domain.Entities;
 
-namespace MemberInfo.Application.Authentication.Common;
+namespace Customer.Application.Authentication.Common;
 
-public record AuthenticationResult(
+public record CustomerResult(
     User User,
     string Token);

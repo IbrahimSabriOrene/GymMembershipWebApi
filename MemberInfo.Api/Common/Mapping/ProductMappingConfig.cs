@@ -1,9 +1,9 @@
 using Mapster;
-using MemberInfo.Application.Products.Commands.CreateProduct;
-using MemberInfo.Contracts.Products;
-using MemberInfo.Domain.Person.ValueObjects;
-using MemberInfo.Domain.Products;
-namespace MemberInfo.Api.Common.Mapping;
+using Customer.Application.Products.Commands.CreateProduct;
+using Customer.Contracts.Products;
+using Customer.Domain.Person.ValueObjects;
+using Customer.Domain.Products;
+namespace Customer.Api.Common.Mapping;
 
 public class ProductMappingConfig : IRegister
 {
@@ -11,7 +11,7 @@ public class ProductMappingConfig : IRegister
     {
         config.NewConfig<PersonId, PersonIds>()
         .Map(dest => dest.Id, src => src.Value);
-        config.NewConfig<CreateProductRequest , CreateProductCommand >()
+        config.NewConfig<CreateProductRequest, CreateProductCommand>()
         .Map(dest => dest.ProductName, src => src.ProductName)
         .Map(dest => dest.Price, src => src.Price)
         .Map(dest => dest.Months, src => src.Months)

@@ -1,17 +1,17 @@
 using System.Text;
-using MemberInfo.Domain.Common.Interfaces.Authentication;
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Common.Interfaces.Services;
-using MemberInfo.Infrastructure.Authentication;
-using MemberInfo.Infrastructure.Persistence;
-using MemberInfo.Infrastructure.Services;
+using Customer.Domain.Common.Interfaces.Authentication;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Common.Interfaces.Services;
+using Customer.Infrastructure.Authentication;
+using Customer.Infrastructure.Persistence;
+using Customer.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace MemberInfo.Infrastructure;
+namespace Customer.Infrastructure;
 
 public static class DependencyInjection
 {
@@ -20,7 +20,7 @@ public static class DependencyInjection
         services.AddAuth(configuration);
         services.AddPersistence();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
-        
+
         return services;
     }
     public static IServiceCollection AddPersistence(this IServiceCollection services)
@@ -52,9 +52,9 @@ public static class DependencyInjection
                         Encoding.UTF8.GetBytes(jwtSettings.Secret))
                 };
             });
-            return services;
-            
+        return services;
+
     }
 
-   
+
 }

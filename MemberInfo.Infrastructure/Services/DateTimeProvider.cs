@@ -1,6 +1,6 @@
-using MemberInfo.Domain.Common.Interfaces.Services;
+using Customer.Domain.Common.Interfaces.Services;
 
-namespace MemberInfo.Infrastructure.Services;
+namespace Customer.Infrastructure.Services;
 
 public class DateTimeProvider : IDateTimeProvider
 {

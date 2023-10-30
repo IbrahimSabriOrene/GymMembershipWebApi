@@ -1,10 +1,10 @@
 using ErrorOr;
-using MemberInfo.Api.Common.Http;
+using Customer.Api.Common.Http;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace MemberInfo.Api.Controllers;
+namespace Customer.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -13,7 +13,7 @@ public class ApiController : ControllerBase
 {
     protected IActionResult Problem(List<Error> errors)
     {
-        if(errors.Count is 0)
+        if (errors.Count is 0)
         {
             return Problem();
         }
@@ -33,7 +33,7 @@ public class ApiController : ControllerBase
 
     private IActionResult Problem(Error error)
     {
-        var statusCode =  error.Type switch
+        var statusCode = error.Type switch
         {
             ErrorType.Conflict => StatusCodes.Status409Conflict,
             ErrorType.Validation => StatusCodes.Status400BadRequest,

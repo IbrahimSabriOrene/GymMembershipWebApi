@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ErrorOr;
 
-namespace MemberInfo.Domain.Common.Errors;
+namespace Customer.Domain.Common.Errors;
 
 public static partial class Errors
 {

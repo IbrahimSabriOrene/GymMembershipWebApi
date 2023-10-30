@@ -6,9 +6,9 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 
-namespace MemberInfo.Infrastructure.Persistence
+namespace Customer.Infrastructure.Persistence
 {
-    public class MemberInfoDbContext 
+    public class MemberInfoDbContext
     {
         private readonly IConfiguration _config;
 
@@ -20,7 +20,7 @@ namespace MemberInfo.Infrastructure.Persistence
 
 
     }
-    
-        
-    
+
+
+
 }

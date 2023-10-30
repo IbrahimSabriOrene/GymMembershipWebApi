@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Mapster;
 using MapsterMapper;
 
-namespace MemberInfo.Api.Common.Mapping;
+namespace Customer.Api.Common.Mapping;
 
 public static class DependencyInjection
-{   
+{
     public static IServiceCollection AddMappings(this IServiceCollection services)
     {
         var config = TypeAdapterConfig.GlobalSettings;
@@ -19,5 +19,5 @@ public static class DependencyInjection
         services.AddScoped<IMapper, ServiceMapper>();
         return services;
     }
-    
+
 }

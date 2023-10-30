@@ -1,6 +1,6 @@
-using MemberInfo.Domain.Models;
+using Customer.Domain.Models;
 
-namespace MemberInfo.Domain.Persons.ValueObjects;
+namespace Customer.Domain.Persons.ValueObjects;
 
 public sealed class Expiration : ValueObject
 {
@@ -11,7 +11,7 @@ public sealed class Expiration : ValueObject
         ExpirationDate = expirationDate;
     }
 
-    public  bool HasExpired()
+    public bool HasExpired()
     {
         return ExpirationDate < DateTime.UtcNow;
     }

@@ -3,9 +3,8 @@ What is done:
 9/15/2023 's TODO---------
 
 Make the connection to db, revise your code.
-thats all.
 
-
+// Need to complete REST API for person and product.
 
 
 end---------
@@ -39,3 +38,8 @@ The person needs link for QR code this is how it works:
 
 Redis
 Kubernetes
+
+
+------------------
+Create new branch 
+

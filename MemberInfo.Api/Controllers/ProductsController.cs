@@ -1,11 +1,11 @@
 using MapsterMapper;
 using MediatR;
-using MemberInfo.Application.Products.Commands.CreateProduct;
-using MemberInfo.Contracts.Products;
+using Customer.Application.Products.Commands.CreateProduct;
+using Customer.Contracts.Products;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace MemberInfo.Api.Controllers;
+namespace Customer.Api.Controllers;
 
 [Route("/products")]
 public class ProductsController : ApiController
@@ -41,4 +41,6 @@ public class ProductsController : ApiController
             error => Problem(error)
             );
     } */
+
+
 }

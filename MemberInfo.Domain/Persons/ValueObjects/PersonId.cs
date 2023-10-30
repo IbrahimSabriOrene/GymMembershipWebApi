@@ -1,20 +1,21 @@
-using MemberInfo.Domain.Models;
+using Customer.Domain.Models;
 
-namespace MemberInfo.Domain.Person.ValueObjects;
+namespace Customer.Domain.Person.ValueObjects;
 
 public sealed class PersonId : ValueObject
 {
-    public Guid Value { get ; private set;}
-    
+    public Guid Value { get; private set; }
+
     public PersonId(Guid value)
     {
         Value = value;
     }
 
-    public static PersonId CreateUnique(){
-        
+    public static PersonId CreateUnique()
+    {
+
         return new PersonId(Guid.NewGuid());
- 
+
     }
 
     public static PersonId Create(Guid value)

@@ -1,7 +1,7 @@
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Entities;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Entities;
 
-namespace MemberInfo.Infrastructure.Persistence;
+namespace Customer.Infrastructure.Persistence;
 
 public class UserRepository : IUserRepository
 {

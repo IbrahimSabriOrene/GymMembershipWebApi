@@ -1,20 +1,20 @@
 using Mapster;
-using MemberInfo.Application.Authentication.Commands.Register;
-using MemberInfo.Application.Authentication.Common;
-using MemberInfo.Application.Authentication.Queries.Login;
-using MemberInfo.Contracts.Authentication;
+using Customer.Application.Authentication.Commands.Register;
+using Customer.Application.Authentication.Common;
+using Customer.Application.Authentication.Queries.Login;
+using Customer.Contracts.Authentication;
 
-namespace MemberInfo.Api.Common.Mapping;
+namespace Customer.Api.Common.Mapping;
 
 public class AuthenticationMappingConfig : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
         config.NewConfig<RegisterRequest, RegisterCommand>();
-    
+
         config.NewConfig<LoginRequest, LoginQuery>();
 
-        config.NewConfig<AuthenticationResult, AuthenticationResponse>()
+        config.NewConfig<CustomerResult, AuthenticationResponse>()
         .Map(dest => dest, src => src.User);
     }
 }

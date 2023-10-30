@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using ErrorOr;
 using MediatR;
-using MemberInfo.Application.Authentication.Common;
+using Customer.Application.Authentication.Common;
 
-namespace MemberInfo.Application.Authentication.Commands.Register;
+namespace Customer.Application.Authentication.Commands.Register;
 
 public record RegisterCommand
 (
@@ -14,4 +14,4 @@ public record RegisterCommand
     string Password,
     string FirstName,
     string LastName
-) : IRequest<ErrorOr<AuthenticationResult>>;
+) : IRequest<ErrorOr<CustomerResult>>;

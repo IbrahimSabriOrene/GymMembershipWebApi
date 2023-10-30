@@ -1,9 +1,9 @@
-using MemberInfo.Domain.Common.Errors;
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Products;
-using MemberInfo.Domain.Products.ValueObjects;
+using Customer.Domain.Common.Errors;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Products;
+using Customer.Domain.Products.ValueObjects;
 
-namespace MemberInfo.Infrastructure.Persistence;
+namespace Customer.Infrastructure.Persistence;
 
 public class ProductRepository : IProductRepository
 {
@@ -16,7 +16,7 @@ public class ProductRepository : IProductRepository
     public Product? FindById(ProductId productId)
     {
         var product = _products.FirstOrDefault(x => x.Id == productId);
-
+        //need if else statement
 
         return product;
     }

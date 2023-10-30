@@ -1,8 +1,8 @@
 using ErrorOr;
 
-namespace MemberInfo.Domain.Common.Errors;
+namespace Customer.Domain.Common.Errors;
 
-public  static partial class Errors
+public static partial class Errors
 {
     public static class User
     {
@@ -10,5 +10,5 @@ public  static partial class Errors
             code: "User.DuplicateEmail",
             description: "Email already exists");
     }
-    
+
 }

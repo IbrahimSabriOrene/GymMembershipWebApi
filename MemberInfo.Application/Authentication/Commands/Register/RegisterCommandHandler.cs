@@ -1,14 +1,14 @@
 using ErrorOr;
 using MediatR;
-using MemberInfo.Application.Authentication.Common;
-using MemberInfo.Domain.Common.Errors;
-using MemberInfo.Domain.Common.Interfaces.Authentication;
-using MemberInfo.Domain.Common.Interfaces.Persistence;
-using MemberInfo.Domain.Entities;
+using Customer.Application.Authentication.Common;
+using Customer.Domain.Common.Errors;
+using Customer.Domain.Common.Interfaces.Authentication;
+using Customer.Domain.Common.Interfaces.Persistence;
+using Customer.Domain.Entities;
 
-namespace MemberInfo.Application.Authentication.Commands.Register;
+namespace Customer.Application.Authentication.Commands.Register;
 
-public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
+public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<CustomerResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
@@ -19,16 +19,16 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<A
     }
 
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(
+    public async Task<ErrorOr<CustomerResult>> Handle(
         RegisterCommand command,
         CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        if(_userRepository.GetUserByEmail(command.Email) is not null)
+        if (_userRepository.GetUserByEmail(command.Email) is not null)
         {
             return Errors.User.DuplicateEmail;
         }
-        
+
         var user = new User
         {
             FirstName = command.FirstName,
@@ -41,7 +41,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<A
 
         var token = _jwtTokenGenerator.GenerateToken(user);
 
-        return new AuthenticationResult(
+        return new CustomerResult(
             user,
             token);
     }

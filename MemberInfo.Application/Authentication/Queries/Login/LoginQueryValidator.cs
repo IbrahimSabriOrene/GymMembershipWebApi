@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace MemberInfo.Application.Authentication.Queries.Login;
+namespace Customer.Application.Authentication.Queries.Login;
 
-public class LoginQueryValidator: AbstractValidator<LoginQuery>
+public class LoginQueryValidator : AbstractValidator<LoginQuery>
 {
     public LoginQueryValidator()
     {

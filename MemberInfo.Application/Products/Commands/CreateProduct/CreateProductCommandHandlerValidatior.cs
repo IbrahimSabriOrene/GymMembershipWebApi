@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace MemberInfo.Application.Products.Commands.CreateProduct;
+namespace Customer.Application.Products.Commands.CreateProduct;
 
 public class CreateProductCommandHandlerValidatior : AbstractValidator<CreateProductCommand>
 {

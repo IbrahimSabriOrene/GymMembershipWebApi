@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Customer.Contracts.Authentication;
-
-public record AuthenticationResponse
+namespace Customer.Contracts.Customers
+{
+    public record CustomerRegisterRequest
 (
-    Guid Id,
     string FirstName,
     string LastName,
     string Email,
-    string Token
+    string PhoneNumber,
+    string ProductId // Product Id can may be a guid
+
 
 );
+}

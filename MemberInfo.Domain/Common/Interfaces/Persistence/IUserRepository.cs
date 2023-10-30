@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MemberInfo.Domain.Entities;
+using Customer.Domain.Entities;
 
-namespace MemberInfo.Domain.Common.Interfaces.Persistence;
+namespace Customer.Domain.Common.Interfaces.Persistence;
 
 public interface IUserRepository
 {

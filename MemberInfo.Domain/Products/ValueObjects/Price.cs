@@ -1,6 +1,6 @@
-using MemberInfo.Domain.Models;
+using Customer.Domain.Models;
 
-namespace MemberInfo.Domain.Products.ValueObjects;
+namespace Customer.Domain.Products.ValueObjects;
 
 public sealed class Price : ValueObject
 {

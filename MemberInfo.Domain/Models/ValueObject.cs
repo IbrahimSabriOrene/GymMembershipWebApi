@@ -1,4 +1,4 @@
-namespace MemberInfo.Domain.Models;
+namespace Customer.Domain.Models;
 // This is a namespace declaration, which organizes your code into a specific scope.
 
 // Value object considered equal if all properties are same
@@ -27,20 +27,20 @@ public abstract class ValueObject : IEquatable<ValueObject>
     }
 
     public static bool operator ==(ValueObject? left, ValueObject? right)
-{
-    if (left is null && right is null)
-        return true;
+    {
+        if (left is null && right is null)
+            return true;
 
-    if (left is null || right is null)
-        return false;
+        if (left is null || right is null)
+            return false;
 
-    return left.Equals(right);
-}
+        return left.Equals(right);
+    }
 
-public static bool operator !=(ValueObject? left, ValueObject? right)
-{
-    return !(left == right);
-}
+    public static bool operator !=(ValueObject? left, ValueObject? right)
+    {
+        return !(left == right);
+    }
 
     public override int GetHashCode()
     {

@@ -1,9 +1,9 @@
 
-namespace MemberInfo.Contracts.Products;
+namespace Customer.Contracts.Products;
 
 public record ProductResponse
 (
-    Guid ProductId,  // Product Response not mapped correctly 
+    Guid ProductId,
     string ProductName,
     List<Prices> Price,
     int Months,
@@ -14,14 +14,4 @@ public record ProductResponse
 );
 
 
-public record Prices
-(
-    int Amount,
-    string Currency
 
-);
-
-public record PersonIds
-(
-    Guid Id // PersonIds not mapped correctly
-);

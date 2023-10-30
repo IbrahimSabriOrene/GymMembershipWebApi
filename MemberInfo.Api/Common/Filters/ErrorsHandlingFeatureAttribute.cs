@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace MemberInfo.Api.Common.Filters;
+namespace Customer.Api.Common.Filters;
 
 public class ErrorsHandlingFeatureAttribute : ExceptionFilterAttribute
 {

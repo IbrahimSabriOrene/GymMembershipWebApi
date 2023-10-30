@@ -1,9 +1,9 @@
-using MemberInfo.Domain.Models;
-using MemberInfo.Domain.Person.ValueObjects;
-using MemberInfo.Domain.Products.ValueObjects;
+using Customer.Domain.Models;
+using Customer.Domain.Person.ValueObjects;
+using Customer.Domain.Products.ValueObjects;
 using System.Collections.Generic;
 
-namespace MemberInfo.Domain.Products
+namespace Customer.Domain.Products
 {
     public sealed class Product : AggregateRoot<ProductId>
     {
@@ -31,9 +31,10 @@ namespace MemberInfo.Domain.Products
             PersonIds = new HashSet<PersonId>();
         }
 
-        public DateTime GetExpirationDate()
+        public DateTime GetExpirationDate(DateTime date)
         {
-            return CreationDate.GetValueOrDefault().AddMonths(Months);
+
+            return date.AddMonths(Months);
         }
 
         public bool AddPersonId(PersonId personId)
@@ -54,11 +55,11 @@ namespace MemberInfo.Domain.Products
                 prices: prices,
                 months: months,
                 creationDate: DateTime.UtcNow,
-                lastUpdateDate:DateTime.UtcNow
+                lastUpdateDate: DateTime.UtcNow
                 );
 
-            
-            
+
+
             foreach (var personId in personIds)
             {
                 product.AddPersonId(personId);
@@ -67,7 +68,7 @@ namespace MemberInfo.Domain.Products
             return product;
 
 
-            
+
         }
     }
 }

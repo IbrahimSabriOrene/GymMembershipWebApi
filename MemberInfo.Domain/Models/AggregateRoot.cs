@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MemberInfo.Domain.Models;
+namespace Customer.Domain.Models;
 // This is a namespace declaration, which organizes your code into a specific scope.
 
 public abstract class AggregateRoot<TId> : Entity<TId>
