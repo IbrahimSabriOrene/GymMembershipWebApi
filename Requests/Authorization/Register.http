@@ -4,8 +4,8 @@ POST {{host}}/auth/register
 Content-Type: application/json
 
 {
-    "firstname":"123",
+    "firstname":"153",
     "lastname":"123",
-    "email":"ib2rwhimrene@wyandex.com",
+    "email":"ib2rwh32425imr23465352ene@wyandex.com",
     "password":"123456"
 }

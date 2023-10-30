@@ -28,3 +28,14 @@ The person needs link for QR code this is how it works:
 -Person has been created.
 -Initialize a product to person by product's id, vice versa. not sure.
 -when initialization is completed, create a qr code link for pass. 
+
+
+
+
+------------
+
+
+
+
+Redis
+Kubernetes

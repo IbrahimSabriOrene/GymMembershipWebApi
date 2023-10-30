@@ -30,7 +30,7 @@ public class ProductsController : ApiController
             error => Problem(error)
             );
     }
-    
+
 
     /* public async Task<IActionResult> AssignProductById(CreateProductRequest request, Guid personId)
     {
