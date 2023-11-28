@@ -1,45 +1,22 @@
-What is done:
+# TODO:
 
-9/15/2023 's TODO---------
+## 1.0.0
 
-Make the connection to db, revise your code.
+Product id "gets" the person's id but how? 
 
-// Need to complete REST API for person and product.
+first, we have to create person
+then in product, we have to get the person's id
+check if person exists.
+if person exists, add product to person's product list vice versa
 
+## 1.0.1
 
-end---------
-
-
-Product Api is done, need some validations.
-
-Person Api is ready, need to make the service on application layer
-
-What's left, 
-
-
-Person has to have empty list of product.
-
-Documentation is not complete.
-
-The person needs link for QR code this is how it works:
-
-
--Person has been created.
--Initialize a product to person by product's id, vice versa. not sure.
--when initialization is completed, create a qr code link for pass. 
-
-
-
-
-------------
+Database Connection --
 
 
 
 
 Redis
 Kubernetes
-
-
-------------------
-Create new branch 
+ 
 

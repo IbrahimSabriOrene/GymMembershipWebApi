@@ -10,7 +10,7 @@ public record CreateProductCommand(
     int Months,
     HashSet<PersonIdsCommand> PersonIds //This place gonna change.
 ) : IRequest<ErrorOr<Product>>;
-
+//Add product Id here.
 
 public record PricesCommand(
     int Amount,

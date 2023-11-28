@@ -11,8 +11,8 @@ namespace Customer.Contracts.Customers
     string LastName,
     string Email,
     string PhoneNumber,
-    string ProductId // Product Id can may be a guid
-
+    Guid ProductId // Product Id can may be a guid
+    //Make this another record for ProductId
 
 );
 }

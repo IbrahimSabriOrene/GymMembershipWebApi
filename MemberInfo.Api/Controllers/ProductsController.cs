@@ -19,7 +19,7 @@ public class ProductsController : ApiController
         _mediator = mediator;
     }
 
-    [HttpPost]
+    [HttpPost("createProduct")]
 
     public async Task<IActionResult> CreateProduct(CreateProductRequest request)
     {

@@ -5,6 +5,7 @@ using Customer.Domain.Common.Interfaces.Services;
 using Customer.Infrastructure.Authentication;
 using Customer.Infrastructure.Persistence;
 using Customer.Infrastructure.Services;
+using MemberInfo.Domain.Common.Interfaces.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,7 @@ public static class DependencyInjection
     {
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<ICustomerRepository, MemberInfoDbContext>();
         return services;
 
     }

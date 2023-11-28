@@ -1,5 +1,6 @@
 using Customer.Domain.Common.Interfaces.Persistence;
 using Customer.Domain.Entities;
+using Customer.Domain.Products.ValueObjects;
 
 namespace Customer.Infrastructure.Persistence;
 
@@ -16,4 +17,5 @@ public class UserRepository : IUserRepository
     {
         return _users.FirstOrDefault(u => u.Email == email);
     }
+
 }

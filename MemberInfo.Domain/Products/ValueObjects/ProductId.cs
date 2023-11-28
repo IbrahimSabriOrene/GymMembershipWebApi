@@ -17,8 +17,9 @@ public sealed class ProductId : ValueObject
     public static ProductId CreateUnique()
     {
 
-        return new(Guid.NewGuid());
+        return new(Guid.NewGuid()); // this will change
     }
+
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

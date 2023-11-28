@@ -13,7 +13,7 @@ public record CustomerRegisterResponse
     string PhoneNumber,
     //Expiration date -> Come from product
     string ExpirationDate, //Not sure about this one, maybe date time.
-    string ProductId // Product Id can may be a guid
+    Guid ProductId // Product Id can may be a guid
 
 
 );

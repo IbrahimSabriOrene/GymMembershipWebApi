@@ -20,4 +20,21 @@ public class ProductRepository : IProductRepository
 
         return product;
     }
+
+    public bool Exists(ProductId productId)
+    {
+        var product = _products.FirstOrDefault(x => x.Id == productId);
+        if (product is not null)
+        {
+            return true;
+        }
+        else return false;
+        /*
+        if (product == null)
+        {
+            throw new ProductNotFoundException(productId);
+        }
+        */
+
+    }
 }

@@ -7,10 +7,8 @@ using Customer.Domain.Products.ValueObjects;
 
 namespace Customer.Domain.Person;
 
-public sealed class Person : AggregateRoot<PersonId>
+public class Person : AggregateRoot<PersonId>
 {
-    private readonly IProductRepository _productRepository;
-
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string Email { get; private set; }
@@ -19,7 +17,6 @@ public sealed class Person : AggregateRoot<PersonId>
     public DateTime? LastUpdateDate { get; private set; }
     public DateTime? ExpirationDate { get; private set; }
     public ProductId ProductId { get; private set; }
-    public IProductRepository ProductRepository { get; private set; } = null!;
 
     public Person(
         PersonId personId,
@@ -30,8 +27,8 @@ public sealed class Person : AggregateRoot<PersonId>
         DateTime creationDate,
         DateTime? lastUpdateDate,
         DateTime? expirationDate,
-        ProductId productId,
-        IProductRepository productRepository
+        ProductId productId
+
 
        ) : base(personId)
     {
@@ -43,28 +40,21 @@ public sealed class Person : AggregateRoot<PersonId>
         LastUpdateDate = lastUpdateDate;
         ExpirationDate = expirationDate;
         ProductId = productId;
-        _productRepository = productRepository;
 
     }
 
-    public DateTime? UpdateExpirationDate(DateTime date)
-    {
-        Product? product = _productRepository.FindById(ProductId);
-        DateTime? expirationDate = product?.GetExpirationDate(date);
-        this.ExpirationDate = expirationDate;
 
-        return this.ExpirationDate;
 
-    }
 
     public static Person Create(
         string firstName,
         string lastName,
         string email,
         string phoneNumber,
-        ProductId productId,
-        IProductRepository productRepository)
+        ProductId productId)
     {
+
+
         var personId = PersonId.CreateUnique(); // We are creating the guid id in here this is not good 
         var person = new Person(
             personId: personId,
@@ -75,16 +65,12 @@ public sealed class Person : AggregateRoot<PersonId>
             creationDate: DateTime.UtcNow, // This should be change.
             lastUpdateDate: DateTime.UtcNow,
             expirationDate: null,
-            productId: productId,
-            productRepository: productRepository
+            productId: productId
             );
-
-        person.UpdateExpirationDate(DateTime.UtcNow); //This is not valid way to do this. May not work
 
 
         return person;
     }
-
     // We can make it like a choice of months. 1 through 12.
     // There is a problem about this.
 

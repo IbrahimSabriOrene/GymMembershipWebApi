@@ -18,7 +18,7 @@ public sealed class PersonId : ValueObject
 
     }
 
-    public static PersonId Create(Guid value)
+    public static PersonId Insert(Guid value)
     {
         return new PersonId(value);
     }
