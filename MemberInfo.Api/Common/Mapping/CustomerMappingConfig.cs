@@ -15,8 +15,6 @@ public class CustomerMappingConfig : IRegister
         .Map(dest => dest.FirstName, src => src.FirstName)
         .Map(dest => dest.LastName, src => src.LastName)
         .Map(dest => dest.Email, src => src.Email);
-
-
         config.NewConfig<Person, CustomerRegisterResponse>();
 
     }
