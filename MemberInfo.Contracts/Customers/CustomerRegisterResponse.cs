@@ -12,8 +12,10 @@ public record CustomerRegisterResponse
     string LastName,
     string Email,
     string PhoneNumber,
+    DateTime CreationDate,
+    DateTime? LastUpdateDate,
     //Expiration date -> Come from product
-    string ExpirationDate, //Not sure about this one, maybe date time.
+    DateTime ExpirationDate, //Not sure about this one, maybe date time.
     ProductId ProductId // Product Id can may be a guid
 
 
