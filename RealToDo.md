@@ -48,3 +48,11 @@ Instead of product's dateTime trick. No need.
 What i really wanted is different than what i am going to do rightnow.
 
 Change versions.
+
+
+---Start making mappings in MemberInfo.Api part.
+
+
+---After completing the mapping, there will be some changes about this api.
+
+use Result.cs for Application layer. With this way you can map them easily.
