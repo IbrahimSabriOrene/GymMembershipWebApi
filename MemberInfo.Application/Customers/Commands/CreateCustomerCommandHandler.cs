@@ -30,14 +30,12 @@ namespace MemberInfo.Application.Customers.Commands
                 return Errors.NullReference.ProductNotFound("Product not found");
             }
             var productId = product.Id;
+            var currentDate = DateTime.UtcNow;
             var months = product.Months;
-            var expirationDate = product.GetExpirationDate(months, DateTime.UtcNow);
-            //This is how its gonna work. We are gonna get GetExpirationDate(ProductId, DateTime.UtcNow) and make calculations based on that.
-            //we can get the expiration date from the product itself.
-            //var expirationDate = product.GetExpirationDate(months, DateTime.UtcNow); returns DateTime but added months depends on ProductId
-            //getExpirationDate is calculation based on ICustomerRepository
-            //var ExpirationDate = product.ExpirationDate.
-            //if (productId is null): return Errors.NullReference.ProductNotFound("Product not found");
+
+
+
+            var expirationDate = product.GetExpirationDate(months, currentDate);
             var personTask = Task.Run(() => Person.Create(
                 firstName: command.FirstName,
                 lastName: command.LastName,
@@ -45,13 +43,10 @@ namespace MemberInfo.Application.Customers.Commands
                 phoneNumber: command.PhoneNumber,
                 productId: productId,
                 expirationDate: Expiration.GetExpiration(expirationDate)
-            //move this to another service class.
-            // remove expiration date from here. this is how its gonna work: user chooses the productId, 
-            //then the expiration date is set automatically based on the product chosen.
+                // fix namings
             ));
 
             var person = await personTask;
-            //move "add months" to domain layer.
 
 
 
