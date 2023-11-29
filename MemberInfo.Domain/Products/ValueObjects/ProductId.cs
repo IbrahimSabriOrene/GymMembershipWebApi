@@ -19,7 +19,15 @@ public sealed class ProductId : ValueObject
 
         return new(Guid.NewGuid()); // this will change
     }
+    public static ProductId GetProductId(Guid value)
+    {
+        return new(value);
+    }
 
+    public static ProductId Insert(Guid value)
+    {
+        return new(value);
+    }
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
