@@ -8,7 +8,7 @@ using Customer.Domain.Entities;
 
 namespace Customer.Application.Authentication.Queries.Login;
 
-public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<CustomerResult>>
+public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<UserResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
@@ -18,7 +18,7 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<CustomerRes
         _userRepository = userRepository;
     }
 
-    public async Task<ErrorOr<CustomerResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
+    public async Task<ErrorOr<UserResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
         if (_userRepository.GetUserByEmail(query.Email) is not User user)
@@ -33,7 +33,7 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<CustomerRes
 
         var token = _jwtTokenGenerator.GenerateToken(user);
 
-        return new CustomerResult(
+        return new UserResult(
             user,
             token);
     }

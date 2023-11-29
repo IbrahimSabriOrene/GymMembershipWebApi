@@ -8,7 +8,7 @@ using Customer.Domain.Entities;
 
 namespace Customer.Application.Authentication.Commands.Register;
 
-public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<CustomerResult>>
+public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<UserResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
@@ -19,7 +19,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<C
     }
 
 
-    public async Task<ErrorOr<CustomerResult>> Handle(
+    public async Task<ErrorOr<UserResult>> Handle(
         RegisterCommand command,
         CancellationToken cancellationToken)
     {
@@ -41,8 +41,10 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<C
 
         var token = _jwtTokenGenerator.GenerateToken(user);
 
-        return new CustomerResult(
+        var userResult = new UserResult(
             user,
             token);
+
+        return userResult;
     }
 }

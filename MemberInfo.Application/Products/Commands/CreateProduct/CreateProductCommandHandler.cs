@@ -17,21 +17,21 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         _productRepository = productRepository;
     }
 
-    public async Task<ErrorOr<Product>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Product>> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        var personIds = request.PersonIds.Select(property => PersonId.Insert(property.Id)).ToHashSet();
+        var personIds = command.PersonIds.Select(property => PersonId.Insert(property.Id)).ToHashSet();
         // We should change PersonId.Create to get personBy id.
         // Because we are creating a product, we should get the person by id.
         // Something like, insert person by id first, check if user exists, if not, return error.
 
 
         var product = Product.Create(
-            productName: request.ProductName,
-            prices: request.Price.Select(property => Price.Create(
+            productName: command.ProductName,
+            prices: command.Price.Select(property => Price.Create(
                 property.Amount,
                 property.Currency)).ToList(),
-            months: request.Months,
+            months: command.Months,
             personIds: personIds  // This will change soon.
             );
 
