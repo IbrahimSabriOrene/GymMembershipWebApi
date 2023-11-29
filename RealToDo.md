@@ -12,3 +12,20 @@ move these:
 
     }
 ```
+
+
+***create customer result, product result, make connections again***
+
+
+first Create customer result
+then create product result
+make mappings about it, change product and customer command
+Carry expiration date to the application layer.
+make it work!
+
+then when you complete everything includes validation. 
+
+fix the product id system
+
+One person have only 1 product id, 
+1 product have multiple person id's
