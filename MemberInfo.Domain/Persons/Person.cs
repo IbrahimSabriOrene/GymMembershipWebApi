@@ -7,7 +7,7 @@ using Customer.Domain.Products.ValueObjects;
 
 namespace Customer.Domain.Person;
 
-public class Person : AggregateRoot<PersonId>
+public sealed class Person : AggregateRoot<PersonId>
 {
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
