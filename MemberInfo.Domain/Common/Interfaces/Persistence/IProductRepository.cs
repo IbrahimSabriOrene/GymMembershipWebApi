@@ -12,5 +12,6 @@ public interface IProductRepository
     void Add(Product product);
     bool Exists(ProductId productId);
 
-    Product? FindById(ProductId productId);
+    Product? FindById(Guid Id);
+
 }
