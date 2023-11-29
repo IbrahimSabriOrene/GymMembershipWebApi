@@ -42,6 +42,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return !(left == right);
     }
 
+
     public override int GetHashCode()
     {
         // Purpose: Generates a hash code for a value object based on its equality components.
