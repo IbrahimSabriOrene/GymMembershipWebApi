@@ -17,8 +17,6 @@ public record CreateCustomerCommand(
     string LastName,
     string Email,
     string PhoneNumber,
-    DateTime CreationDate,
-    DateTime? LastUpdateDate,
     Guid Value
 ) : IRequest<ErrorOr<Person>>;
 
