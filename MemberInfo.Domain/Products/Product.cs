@@ -12,7 +12,6 @@ namespace Customer.Domain.Products
         public int Months { get; private set; }
         public DateTime? CreationDate { get; private set; }
         public DateTime? LastUpdateDate { get; private set; }
-
         public HashSet<PersonId> PersonIds { get; private set; }
 
         public Product(
@@ -21,7 +20,7 @@ namespace Customer.Domain.Products
             List<Price> prices,
             int months,
             DateTime? creationDate,
-            DateTime lastUpdateDate) : base(productId)
+            DateTime? lastUpdateDate) : base(productId)
         {
             ProductName = productName;
             Prices = prices;
@@ -29,12 +28,13 @@ namespace Customer.Domain.Products
             CreationDate = creationDate;
             LastUpdateDate = lastUpdateDate;
             PersonIds = new HashSet<PersonId>();
+            
         }
 
-        public DateTime GetExpirationDate(DateTime date)
+        public  DateTime GetExpirationDate(int months, DateTime date)
         {
-
-            return date.AddMonths(Months);
+            
+            return date.AddMonths(months);
         }
 
         public bool AddPersonId(PersonId personId)
@@ -57,8 +57,6 @@ namespace Customer.Domain.Products
                 creationDate: DateTime.UtcNow,
                 lastUpdateDate: DateTime.UtcNow
                 );
-
-
 
             foreach (var personId in personIds)
             {
