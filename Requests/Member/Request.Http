@@ -1,5 +1,5 @@
 @host = https://localhost:7140
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0OWNmMTQ3Yi1iZDQ1LTQyZDUtOTMxNi03NTNmNDU3NzEyNGYiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiJhN2VhYzFiYi1mYjc1LTQ4ODktYWVhMi02YzQ4NzU4ZGEwYzMiLCJleHAiOjE3MDEyMTcwNDYsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.gbaDNKasQkbhBAsnAiMp6KzFqyuGZR0w3QJriBPWuME
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1OGE2MjAxOC1lNjM1LTQ1MWUtYjFlYi1mNDk5NDMzNzM2MDQiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI0MGExNGRkNi0yN2Y5LTQxYTAtYjEyOS1hNzdmMjdkZmJiMTciLCJleHAiOjE3MDEzMDI2NDgsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.fM4VTUAB-hxi2bxmuEWvEIPoFBdAL1Hl9nPVYXCxLG0
 
 POST {{host}}/customer/createUser
 Content-Type: application/json
@@ -10,6 +10,6 @@ Authorization: Bearer {{token}}
     "lastName": "Doe",
     "email": "johndoe@example.com",
     "phoneNumber": "123457890",
-    "productId": "d15f19a4-ebef-4f5b-b10d-531b33a64ef3"
+    "value": "b03ba8fb-1dbf-4b57-a5f3-10962db8141b"
 }
 
