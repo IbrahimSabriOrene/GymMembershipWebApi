@@ -51,7 +51,7 @@ namespace MemberInfo.Application.Customers.Commands
             ));
 
             var person = await personTask;
-            //move addmonths to domain layer.
+            //move "add months" to domain layer.
 
 
 
