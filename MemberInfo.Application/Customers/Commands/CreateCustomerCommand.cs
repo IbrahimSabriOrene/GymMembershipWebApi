@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Customer.Domain.Person;
 using Customer.Domain.Person.ValueObjects;
+using Customer.Domain.Products;
 using ErrorOr;
 using MediatR;
 
@@ -18,15 +19,12 @@ public record CreateCustomerCommand(
     string PhoneNumber,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    DateTime? ExpirationDate,
-    ProductIdCommand ProductId
+    Guid Value
 ) : IRequest<ErrorOr<Person>>;
 
 //Add PersonId here.
-public record ProductIdCommand(
-    Guid Id
 
-);
+
 
 
 
