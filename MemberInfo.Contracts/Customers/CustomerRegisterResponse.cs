@@ -23,4 +23,4 @@ public record CustomerRegisterResponse
 
 public record ProductId(Guid Value);
 
-public record CustomerId(Guid Value);
+public record CustomerId(Guid Value); //Change this to direct Guid Value.

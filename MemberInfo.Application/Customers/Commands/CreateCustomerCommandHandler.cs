@@ -35,7 +35,7 @@ namespace MemberInfo.Application.Customers.Commands
 
 
 
-            var expirationDate = product.GetExpirationDate(months, currentDate);
+            var expirationDate = Product.GetExpirationDate(months, currentDate);
             var personTask = Task.Run(() => Person.Create(
                 firstName: command.FirstName,
                 lastName: command.LastName,

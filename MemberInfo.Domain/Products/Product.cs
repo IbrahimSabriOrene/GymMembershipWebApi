@@ -31,7 +31,7 @@ namespace Customer.Domain.Products
             
         }
 
-        public  DateTime GetExpirationDate(int months, DateTime date)
+        public static DateTime GetExpirationDate(int months, DateTime date)
         {
             
             return date.AddMonths(months);
@@ -65,7 +65,7 @@ namespace Customer.Domain.Products
 
             return product;
 
-
+        //Make personId is null by default.
 
         }
     }

@@ -20,6 +20,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     public async Task<ErrorOr<Product>> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
+        // var personIds -> check if personIds exists in the database. then add it to the product. if not, return error.
         var personIds = command.PersonIds.Select(property => PersonId.Insert(property.Id)).ToHashSet();
         // We should change PersonId.Create to get personBy id.
         // Because we are creating a product, we should get the person by id.
@@ -39,11 +40,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         {
             return Errors.NullReference.ProductNotFound("Product not found");
         }
-        if (product.Id is null)
-        {
-            return Errors.NullReference.ProductNotFound("Product not found");
-        }
-
+      
 
         _productRepository.Add(product);
 
