@@ -4,7 +4,6 @@ using MapsterMapper;
 using Customer.Contracts.Customers;
 using MemberInfo.Application.Customers.Commands;
 using ErrorOr;
-using MemberInfo.Application.Customers.Common;
 using Customer.Domain.Person;
 namespace Customer.Api.Controllers;
 
