@@ -30,12 +30,12 @@ namespace MemberInfo.Application.Customers.Commands
                 return Errors.NullReference.ProductNotFound("Product not found");
             }
             var productId = product.Id;
-            var currentDate = DateTime.UtcNow;
+            var currentDate = DateTime.Now;
             var months = product.Months;
 
 
-
-            var expirationDate = product.GetExpirationDate(months, currentDate);
+        // ExpirationDate will be increasable by months.
+            var expirationDate = currentDate.AddMonths(months);
             var personTask = Task.Run(() => Person.Create(
                 firstName: command.FirstName,
                 lastName: command.LastName,
@@ -48,22 +48,12 @@ namespace MemberInfo.Application.Customers.Commands
 
             var person = await personTask;
 
-
-
-
-
             _customerRepository.Add(person);
 
-            
-
+   
             return person;
 
         }
-
-        // return new CustomerResult(
-        //     person,
-        //     person.Expiration
-        // );
     }
 }
 
