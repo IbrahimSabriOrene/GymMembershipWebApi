@@ -1,27 +1,23 @@
 move these:
 
 ```csharp
-//Expiration Date shall move to application layer.
-    public DateTime? UpdateExpirationDate(DateTime date)
-    {
-        Product? product = _productRepository.FindById(ProductId);
-        DateTime? expirationDate = product?.GetExpirationDate(date);
-        this.ExpirationDate = expirationDate;
+ foreach (var personId in personIds)
+            {
+                product.AddPersonId(personId);
+            }
 
-        return this.ExpirationDate;
+```
 
-    }
+```csharp
+ public static DateTime GetExpirationDate(int months, DateTime date)
+        {
+            
+            return date.AddMonths(months);
+        }
 ```
 
 
-***create customer result, product result, make connections again***
 
-
-first Create customer result
-then create product result
-make mappings about it, change product and customer command
-Carry expiration date to the application layer.
-make it work!
 
 then when you complete everything includes validation. 
 
@@ -56,3 +52,6 @@ Change versions.
 ---After completing the mapping, there will be some changes about this api.
 
 use Result.cs for Application layer. With this way you can map them easily.
+
+
+After connecting to the database, connect redis for storing jwt token.
