@@ -12,5 +12,4 @@ public interface ICustomerRepository
 {
     void Add(Person person);
     Person? FindById(PersonId personId);
-    bool Exists(ProductId productId);
-}
+    }

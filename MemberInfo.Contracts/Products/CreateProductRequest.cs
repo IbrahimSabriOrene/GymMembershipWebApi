@@ -4,8 +4,7 @@ public record CreateProductRequest
 (
     string ProductName,
     List<Prices> Price,
-    int Months,
-    HashSet<PersonIds> PersonIds
+    int Months
 );
 //Make personId nullable
 //Request only has one PersonId, but the command has a list of PersonIds.
@@ -18,7 +17,3 @@ public record Prices
 
 );
 
-public record PersonIds
-(
-    Guid Id // PersonIds not mapped correctly
-);

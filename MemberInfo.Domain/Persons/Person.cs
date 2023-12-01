@@ -42,13 +42,6 @@ namespace Customer.Domain.Person
             ProductId = productId;
         }
 
-        public async Task<Expiration> SetExpirationDate(DateTime expiration)
-        {
-            Expiration = Expiration.Create(expiration);
-            return await Task.FromResult(Expiration);
-        }
-
-
         public static Person Create(
             string firstName,
             string lastName,

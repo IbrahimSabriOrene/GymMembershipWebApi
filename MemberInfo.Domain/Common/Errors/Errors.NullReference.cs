@@ -15,5 +15,13 @@ public static partial class Errors
     }
   }
 
+  public static Error CustomerNotFound(string description)
+  {
+
+    return Error.NotFound(
+      code: "Customer.NotFound",
+      description: description);
+  }
+
 
 }

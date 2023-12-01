@@ -12,7 +12,6 @@ namespace Customer.Domain.Products
         public int Months { get; private set; }
         public DateTime? CreationDate { get; private set; }
         public DateTime? LastUpdateDate { get; private set; }
-        public HashSet<PersonId> PersonIds { get; private set; }
 
         public Product(
             ProductId productId,
@@ -20,33 +19,22 @@ namespace Customer.Domain.Products
             List<Price> prices,
             int months,
             DateTime? creationDate,
-            DateTime? lastUpdateDate) : base(productId)
+            DateTime? lastUpdateDate
+            ) : base(productId)
         {
             ProductName = productName;
             Prices = prices;
             Months = months;
             CreationDate = creationDate;
             LastUpdateDate = lastUpdateDate;
-            PersonIds = new HashSet<PersonId>();
-            
         }
 
-        public  DateTime GetExpirationDate(int months, DateTime date)
-        {
-            
-            return date.AddMonths(months);
-        }
-
-        public bool AddPersonId(PersonId personId)
-        {
-            return personId is not null && PersonIds.Add(personId);
-        }
 
         public static Product Create(
             string productName,
             List<Price> prices, // price is null somehow
-            int months,
-            HashSet<PersonId> personIds)
+            int months
+            )
         {
             var productId = ProductId.CreateUnique(); // This is the only place where we create a new ProductId
             var product = new Product(
@@ -55,14 +43,8 @@ namespace Customer.Domain.Products
                 prices: prices,
                 months: months,
                 creationDate: DateTime.UtcNow,
-                lastUpdateDate: DateTime.UtcNow
+                lastUpdateDate: DateTime.UtcNow // DateTime UtcNow not looking good. We should change it.
                 );
-
-            foreach (var personId in personIds)
-            {
-                product.AddPersonId(personId);
-            }
-
             return product;
 
 
