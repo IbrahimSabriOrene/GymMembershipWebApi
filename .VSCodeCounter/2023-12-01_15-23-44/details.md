@@ -1,10 +1,10 @@
 # Details
 
-Date : 2023-11-07 16:05:09
+Date : 2023-12-01 15:23:44
 
 Directory c:\\Users\\ibrah\\GitRepos\\GymMembershipWebApi
 
-Total : 74 files,  1637 codes, 71 comments, 463 blanks, all 2171 lines
+Total : 81 files,  2019 codes, 136 comments, 569 blanks, all 2724 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -19,11 +19,12 @@ Total : 74 files,  1637 codes, 71 comments, 463 blanks, all 2171 lines
 | [MemberInfo.Api/Common/Filters/ErrorsHandlingFeatureAttribute.cs](/MemberInfo.Api/Common/Filters/ErrorsHandlingFeatureAttribute.cs) | C# | 26 | 0 | 5 | 31 |
 | [MemberInfo.Api/Common/Http/HttpErrorTypes.cs](/MemberInfo.Api/Common/Http/HttpErrorTypes.cs) | C# | 9 | 0 | 3 | 12 |
 | [MemberInfo.Api/Common/Mapping/AuthenticationMappingConfig.cs](/MemberInfo.Api/Common/Mapping/AuthenticationMappingConfig.cs) | C# | 16 | 0 | 5 | 21 |
+| [MemberInfo.Api/Common/Mapping/CustomerMappingConfig.cs](/MemberInfo.Api/Common/Mapping/CustomerMappingConfig.cs) | C# | 33 | 1 | 7 | 41 |
 | [MemberInfo.Api/Common/Mapping/DependencyInjection.cs](/MemberInfo.Api/Common/Mapping/DependencyInjection.cs) | C# | 19 | 0 | 5 | 24 |
-| [MemberInfo.Api/Common/Mapping/ProductMappingConfig.cs](/MemberInfo.Api/Common/Mapping/ProductMappingConfig.cs) | C# | 27 | 0 | 3 | 30 |
+| [MemberInfo.Api/Common/Mapping/ProductMappingConfig.cs](/MemberInfo.Api/Common/Mapping/ProductMappingConfig.cs) | C# | 23 | 1 | 3 | 27 |
 | [MemberInfo.Api/Controllers/ApiController.cs](/MemberInfo.Api/Controllers/ApiController.cs) | C# | 53 | 0 | 10 | 63 |
 | [MemberInfo.Api/Controllers/AuthenticationController.cs](/MemberInfo.Api/Controllers/AuthenticationController.cs) | C# | 42 | 0 | 12 | 54 |
-| [MemberInfo.Api/Controllers/CustomerController.cs](/MemberInfo.Api/Controllers/CustomerController.cs) | C# | 48 | 2 | 10 | 60 |
+| [MemberInfo.Api/Controllers/CustomerController.cs](/MemberInfo.Api/Controllers/CustomerController.cs) | C# | 29 | 26 | 7 | 62 |
 | [MemberInfo.Api/Controllers/ErrorsController.cs](/MemberInfo.Api/Controllers/ErrorsController.cs) | C# | 20 | 0 | 4 | 24 |
 | [MemberInfo.Api/Controllers/ProductsController.cs](/MemberInfo.Api/Controllers/ProductsController.cs) | C# | 27 | 9 | 11 | 47 |
 | [MemberInfo.Api/DependencyInjection.cs](/MemberInfo.Api/DependencyInjection.cs) | C# | 14 | 1 | 3 | 18 |
@@ -33,57 +34,63 @@ Total : 74 files,  1637 codes, 71 comments, 463 blanks, all 2171 lines
 | [MemberInfo.Api/appsettings.Development.json](/MemberInfo.Api/appsettings.Development.json) | JSON | 14 | 0 | 1 | 15 |
 | [MemberInfo.Api/appsettings.json](/MemberInfo.Api/appsettings.json) | JSON | 15 | 0 | 1 | 16 |
 | [MemberInfo.Application/Authentication/Commands/Register/RegisterCommand.cs](/MemberInfo.Application/Authentication/Commands/Register/RegisterCommand.cs) | C# | 15 | 0 | 3 | 18 |
-| [MemberInfo.Application/Authentication/Commands/Register/RegisterCommandHandler.cs](/MemberInfo.Application/Authentication/Commands/Register/RegisterCommandHandler.cs) | C# | 40 | 0 | 9 | 49 |
+| [MemberInfo.Application/Authentication/Commands/Register/RegisterCommandHandler.cs](/MemberInfo.Application/Authentication/Commands/Register/RegisterCommandHandler.cs) | C# | 41 | 0 | 10 | 51 |
 | [MemberInfo.Application/Authentication/Commands/Register/RegisterCommandValidator.cs](/MemberInfo.Application/Authentication/Commands/Register/RegisterCommandValidator.cs) | C# | 22 | 0 | 2 | 24 |
 | [MemberInfo.Application/Authentication/Common/AuthenticationResult.cs](/MemberInfo.Application/Authentication/Common/AuthenticationResult.cs) | C# | 5 | 0 | 3 | 8 |
 | [MemberInfo.Application/Authentication/Queries/Login/LoginQuery.cs](/MemberInfo.Application/Authentication/Queries/Login/LoginQuery.cs) | C# | 9 | 0 | 3 | 12 |
-| [MemberInfo.Application/Authentication/Queries/Login/LoginQueryHandler.cs](/MemberInfo.Application/Authentication/Queries/Login/LoginQueryHandler.cs) | C# | 34 | 0 | 10 | 44 |
+| [MemberInfo.Application/Authentication/Queries/Login/LoginQueryHandler.cs](/MemberInfo.Application/Authentication/Queries/Login/LoginQueryHandler.cs) | C# | 34 | 0 | 11 | 45 |
 | [MemberInfo.Application/Authentication/Queries/Login/LoginQueryValidator.cs](/MemberInfo.Application/Authentication/Queries/Login/LoginQueryValidator.cs) | C# | 18 | 0 | 2 | 20 |
 | [MemberInfo.Application/Common/Behaviors/ValidationBehavior.cs](/MemberInfo.Application/Common/Behaviors/ValidationBehavior.cs) | C# | 32 | 1 | 9 | 42 |
-| [MemberInfo.Application/Customers/Commands/CreateCustomerCommand.cs](/MemberInfo.Application/Customers/Commands/CreateCustomerCommand.cs) | C# | 20 | 1 | 9 | 30 |
-| [MemberInfo.Application/Customers/Commands/CreateCustomerCommandHandler.cs](/MemberInfo.Application/Customers/Commands/CreateCustomerCommandHandler.cs) | C# | 27 | 0 | 10 | 37 |
+| [MemberInfo.Application/Customers/Commands/CreateCustomerCommand.cs](/MemberInfo.Application/Customers/Commands/CreateCustomerCommand.cs) | C# | 17 | 1 | 12 | 30 |
+| [MemberInfo.Application/Customers/Commands/CreateCustomerCommandHandler.cs](/MemberInfo.Application/Customers/Commands/CreateCustomerCommandHandler.cs) | C# | 44 | 2 | 15 | 61 |
+| [MemberInfo.Application/Customers/Commands/CustomerCommandValidator.cs](/MemberInfo.Application/Customers/Commands/CustomerCommandValidator.cs) | C# | 25 | 0 | 2 | 27 |
 | [MemberInfo.Application/DependencyInjection.cs](/MemberInfo.Application/DependencyInjection.cs) | C# | 16 | 0 | 2 | 18 |
 | [MemberInfo.Application/MemberInfo.Application.csproj](/MemberInfo.Application/MemberInfo.Application.csproj) | XML | 17 | 0 | 5 | 22 |
-| [MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommand.cs](/MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommand.cs) | C# | 17 | 1 | 6 | 24 |
-| [MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandler.cs](/MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandler.cs) | C# | 39 | 8 | 14 | 61 |
+| [MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommand.cs](/MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommand.cs) | C# | 13 | 1 | 5 | 19 |
+| [MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandler.cs](/MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandler.cs) | C# | 36 | 3 | 14 | 53 |
 | [MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandlerValidatior.cs](/MemberInfo.Application/Products/Commands/CreateProduct/CreateProductCommandHandlerValidatior.cs) | C# | 15 | 0 | 3 | 18 |
 | [MemberInfo.Contracts/Authentication/AuthenticationResponse.cs](/MemberInfo.Contracts/Authentication/AuthenticationResponse.cs) | C# | 13 | 0 | 4 | 17 |
 | [MemberInfo.Contracts/Authentication/LoginRequest.cs](/MemberInfo.Contracts/Authentication/LoginRequest.cs) | C# | 10 | 0 | 3 | 13 |
 | [MemberInfo.Contracts/Authentication/RegisterRequest.cs](/MemberInfo.Contracts/Authentication/RegisterRequest.cs) | C# | 12 | 0 | 3 | 15 |
-| [MemberInfo.Contracts/Customers/CustomerRegisterRequest.cs](/MemberInfo.Contracts/Customers/CustomerRegisterRequest.cs) | C# | 15 | 0 | 3 | 18 |
-| [MemberInfo.Contracts/Customers/CustomerRegisterResponse.cs](/MemberInfo.Contracts/Customers/CustomerRegisterResponse.cs) | C# | 14 | 1 | 4 | 19 |
+| [MemberInfo.Contracts/Customers/CustomerRegisterRequest.cs](/MemberInfo.Contracts/Customers/CustomerRegisterRequest.cs) | C# | 15 | 1 | 4 | 20 |
+| [MemberInfo.Contracts/Customers/CustomerRegisterResponse.cs](/MemberInfo.Contracts/Customers/CustomerRegisterResponse.cs) | C# | 19 | 0 | 6 | 25 |
 | [MemberInfo.Contracts/MemberInfo.Contracts.csproj](/MemberInfo.Contracts/MemberInfo.Contracts.csproj) | XML | 7 | 0 | 3 | 10 |
-| [MemberInfo.Contracts/Products/CreateProductRequest.cs](/MemberInfo.Contracts/Products/CreateProductRequest.cs) | C# | 17 | 3 | 4 | 24 |
-| [MemberInfo.Contracts/Products/ProductResponse.cs](/MemberInfo.Contracts/Products/ProductResponse.cs) | C# | 11 | 0 | 7 | 18 |
-| [MemberInfo.Domain/Common/Errors/Errors.Authentication.cs](/MemberInfo.Domain/Common/Errors/Errors.Authentication.cs) | C# | 15 | 0 | 3 | 18 |
-| [MemberInfo.Domain/Common/Errors/Errors.NullReference.cs](/MemberInfo.Domain/Common/Errors/Errors.NullReference.cs) | C# | 14 | 0 | 6 | 20 |
-| [MemberInfo.Domain/Common/Errors/Errors.User.cs](/MemberInfo.Domain/Common/Errors/Errors.User.cs) | C# | 11 | 0 | 4 | 15 |
+| [MemberInfo.Contracts/Products/CreateProductRequest.cs](/MemberInfo.Contracts/Products/CreateProductRequest.cs) | C# | 12 | 3 | 5 | 20 |
+| [MemberInfo.Contracts/Products/ProductResponse.cs](/MemberInfo.Contracts/Products/ProductResponse.cs) | C# | 10 | 0 | 7 | 17 |
+| [MemberInfo.Domain/Common/Errors/Errors.Authentication.cs](/MemberInfo.Domain/Common/Errors/Errors.Authentication.cs) | C# | 18 | 0 | 4 | 22 |
+| [MemberInfo.Domain/Common/Errors/Errors.NullReference.cs](/MemberInfo.Domain/Common/Errors/Errors.NullReference.cs) | C# | 26 | 0 | 9 | 35 |
+| [MemberInfo.Domain/Common/Errors/Errors.User.cs](/MemberInfo.Domain/Common/Errors/Errors.User.cs) | C# | 20 | 0 | 8 | 28 |
 | [MemberInfo.Domain/Common/Interfaces/Authentication/IJwtTokenGenerator.cs](/MemberInfo.Domain/Common/Interfaces/Authentication/IJwtTokenGenerator.cs) | C# | 10 | 0 | 3 | 13 |
-| [MemberInfo.Domain/Common/Interfaces/Persistence/IProductRepository.cs](/MemberInfo.Domain/Common/Interfaces/Persistence/IProductRepository.cs) | C# | 12 | 0 | 4 | 16 |
-| [MemberInfo.Domain/Common/Interfaces/Persistence/IUserRepository.cs](/MemberInfo.Domain/Common/Interfaces/Persistence/IUserRepository.cs) | C# | 11 | 0 | 3 | 14 |
+| [MemberInfo.Domain/Common/Interfaces/Persistence/ICustomerRepository.cs](/MemberInfo.Domain/Common/Interfaces/Persistence/ICustomerRepository.cs) | C# | 13 | 0 | 2 | 15 |
+| [MemberInfo.Domain/Common/Interfaces/Persistence/IProductRepository.cs](/MemberInfo.Domain/Common/Interfaces/Persistence/IProductRepository.cs) | C# | 7 | 0 | 4 | 11 |
+| [MemberInfo.Domain/Common/Interfaces/Persistence/IUserRepository.cs](/MemberInfo.Domain/Common/Interfaces/Persistence/IUserRepository.cs) | C# | 15 | 1 | 7 | 23 |
 | [MemberInfo.Domain/Common/Interfaces/Services/IDateTimeProvider.cs](/MemberInfo.Domain/Common/Interfaces/Services/IDateTimeProvider.cs) | C# | 5 | 0 | 2 | 7 |
+| [MemberInfo.Domain/Common/Interfaces/Services/IDbContext.cs](/MemberInfo.Domain/Common/Interfaces/Services/IDbContext.cs) | C# | 13 | 0 | 1 | 14 |
 | [MemberInfo.Domain/Entities/User.cs](/MemberInfo.Domain/Entities/User.cs) | C# | 14 | 0 | 3 | 17 |
 | [MemberInfo.Domain/MemberInfo.Domain.csproj](/MemberInfo.Domain/MemberInfo.Domain.csproj) | XML | 10 | 0 | 4 | 14 |
 | [MemberInfo.Domain/Models/AggregateRoot.cs](/MemberInfo.Domain/Models/AggregateRoot.cs) | C# | 12 | 8 | 8 | 28 |
 | [MemberInfo.Domain/Models/Entity.cs](/MemberInfo.Domain/Models/Entity.cs) | C# | 29 | 16 | 14 | 59 |
-| [MemberInfo.Domain/Models/ValueObject.cs](/MemberInfo.Domain/Models/ValueObject.cs) | C# | 36 | 11 | 18 | 65 |
-| [MemberInfo.Domain/Persons/Person.cs](/MemberInfo.Domain/Persons/Person.cs) | C# | 72 | 3 | 20 | 95 |
-| [MemberInfo.Domain/Persons/ValueObjects/Expiration.cs](/MemberInfo.Domain/Persons/ValueObjects/Expiration.cs) | C# | 22 | 0 | 9 | 31 |
+| [MemberInfo.Domain/Models/ValueObject.cs](/MemberInfo.Domain/Models/ValueObject.cs) | C# | 36 | 11 | 19 | 66 |
+| [MemberInfo.Domain/Persons/Person.cs](/MemberInfo.Domain/Persons/Person.cs) | C# | 65 | 0 | 6 | 71 |
+| [MemberInfo.Domain/Persons/ValueObjects/Expiration.cs](/MemberInfo.Domain/Persons/ValueObjects/Expiration.cs) | C# | 30 | 0 | 9 | 39 |
 | [MemberInfo.Domain/Persons/ValueObjects/PersonId.cs](/MemberInfo.Domain/Persons/ValueObjects/PersonId.cs) | C# | 22 | 0 | 10 | 32 |
-| [MemberInfo.Domain/Products/Product.cs](/MemberInfo.Domain/Products/Product.cs) | C# | 60 | 0 | 15 | 75 |
+| [MemberInfo.Domain/Products/Product.cs](/MemberInfo.Domain/Products/Product.cs) | C# | 47 | 0 | 8 | 55 |
 | [MemberInfo.Domain/Products/ValueObjects/Price.cs](/MemberInfo.Domain/Products/ValueObjects/Price.cs) | C# | 21 | 4 | 8 | 33 |
-| [MemberInfo.Domain/Products/ValueObjects/ProductId.cs](/MemberInfo.Domain/Products/ValueObjects/ProductId.cs) | C# | 20 | 0 | 9 | 29 |
+| [MemberInfo.Domain/Products/ValueObjects/ProductId.cs](/MemberInfo.Domain/Products/ValueObjects/ProductId.cs) | C# | 24 | 0 | 10 | 34 |
 | [MemberInfo.Infrastructure/Authentication/JwtSettings.cs](/MemberInfo.Infrastructure/Authentication/JwtSettings.cs) | C# | 13 | 0 | 3 | 16 |
 | [MemberInfo.Infrastructure/Authentication/JwtTokenGenerator.cs](/MemberInfo.Infrastructure/Authentication/JwtTokenGenerator.cs) | C# | 39 | 0 | 5 | 44 |
-| [MemberInfo.Infrastructure/DependencyInjection.cs](/MemberInfo.Infrastructure/DependencyInjection.cs) | C# | 51 | 0 | 10 | 61 |
-| [MemberInfo.Infrastructure/MemberInfo.Infrastructure.csproj](/MemberInfo.Infrastructure/MemberInfo.Infrastructure.csproj) | XML | 18 | 0 | 0 | 18 |
-| [MemberInfo.Infrastructure/Persistence/MemberInfoDbContext.cs](/MemberInfo.Infrastructure/Persistence/MemberInfoDbContext.cs) | C# | 18 | 0 | 8 | 26 |
-| [MemberInfo.Infrastructure/Persistence/ProductRepository.cs](/MemberInfo.Infrastructure/Persistence/ProductRepository.cs) | C# | 18 | 1 | 5 | 24 |
-| [MemberInfo.Infrastructure/Persistence/UserRepository.cs](/MemberInfo.Infrastructure/Persistence/UserRepository.cs) | C# | 15 | 0 | 5 | 20 |
+| [MemberInfo.Infrastructure/DbContext.cs](/MemberInfo.Infrastructure/DbContext.cs) | C# | 45 | 0 | 16 | 61 |
+| [MemberInfo.Infrastructure/DependencyInjection.cs](/MemberInfo.Infrastructure/DependencyInjection.cs) | C# | 53 | 0 | 10 | 63 |
+| [MemberInfo.Infrastructure/MemberInfo.Infrastructure.csproj](/MemberInfo.Infrastructure/MemberInfo.Infrastructure.csproj) | XML | 20 | 0 | 0 | 20 |
+| [MemberInfo.Infrastructure/Persistence/CustomerRepository.cs](/MemberInfo.Infrastructure/Persistence/CustomerRepository.cs) | C# | 35 | 0 | 8 | 43 |
+| [MemberInfo.Infrastructure/Persistence/ProductRepository.cs](/MemberInfo.Infrastructure/Persistence/ProductRepository.cs) | C# | 23 | 0 | 5 | 28 |
+| [MemberInfo.Infrastructure/Persistence/UserRepository.cs](/MemberInfo.Infrastructure/Persistence/UserRepository.cs) | C# | 53 | 45 | 14 | 112 |
 | [MemberInfo.Infrastructure/Services/DateTimeProvider.cs](/MemberInfo.Infrastructure/Services/DateTimeProvider.cs) | C# | 6 | 0 | 3 | 9 |
-| [README.md](/README.md) | Markdown | 49 | 0 | 11 | 60 |
+| [RealToDo.md](/RealToDo.md) | Markdown | 127 | 0 | 44 | 171 |
+| [Requests.md](/Requests.md) | Markdown | 65 | 0 | 30 | 95 |
 | [Requests/Authorization/Login.http](/Requests/Authorization/Login.http) | HTTP | 7 | 0 | 4 | 11 |
 | [Requests/Authorization/Register.http](/Requests/Authorization/Register.http) | HTTP | 9 | 0 | 3 | 12 |
-| [Requests/Product/CreateProduct.http](/Requests/Product/CreateProduct.http) | HTTP | 23 | 0 | 3 | 26 |
+| [Requests/Product/CreateProduct.http](/Requests/Product/CreateProduct.http) | HTTP | 16 | 0 | 3 | 19 |
+| [Response.md](/Response.md) | Markdown | 54 | 0 | 3 | 57 |
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

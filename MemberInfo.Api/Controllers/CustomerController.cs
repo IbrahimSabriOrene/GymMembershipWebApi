@@ -24,7 +24,7 @@ public class CustomerController : ApiController
     public async Task<IActionResult> CreateUser(CustomerRegisterRequest request)
     {
         var command = _mapper.Map<CreateCustomerCommand>(request);
-        ErrorOr<Person> CreateCustomerResult = await _mediator.Send(command);
+        ErrorOr<Domain.Person.Customer> CreateCustomerResult = await _mediator.Send(command);
         return CreateCustomerResult.Match(
             customer => Ok(_mapper.Map<CustomerRegisterResponse>(customer)),
             error => Problem(error)

@@ -6,7 +6,9 @@
         "Hmac",
         "lastname",
         "Mapster",
-        "Mediat"
+        "Mediat",
+        "parms",
+        "UNIQUEIDENTIFIER"
     ],
     "editor.suggest.showStatusBar": true,
     "workbench.activityBar.iconClickBehavior": "focus",

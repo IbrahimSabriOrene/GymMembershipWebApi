@@ -15,11 +15,10 @@ public record CustomerRegisterResponse
     DateTime CreationDate,
     DateTime? LastUpdateDate,
     DateTime ExpirationDate, 
-    ProductId ProductId
+    Guid ProductId
 
 
 );
 
-public record ProductId(Guid Value); // This will be flat value in the database like ProductId = 00000000-0000-0000-0000-000000000000
 
 public record CustomerId(Guid Value); // This will be flat value in the database like CustomerId = 00000000-0000-0000-0000-000000000000

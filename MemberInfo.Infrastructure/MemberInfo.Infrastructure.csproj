@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\MemberInfo.Application\MemberInfo.Application.csproj" />
+    <ProjectReference Include="..\MemberInfo.Application\MemberInfo.Application.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.151" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.21" />
+    <PackageReference Include="Dapper" Version="2.1.24"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0"/>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.21"/>
+    <PackageReference Include="SqlConnection" Version="1.0.4"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0"/>
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

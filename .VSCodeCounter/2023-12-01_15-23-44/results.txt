@@ -1,0 +1,166 @@
+Date : 2023-12-01 15:23:44
+Directory : c:\Users\ibrah\GitRepos\GymMembershipWebApi
+Total : 81 files,  2019 codes, 136 comments, 569 blanks, all 2724 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         63 |      1,537 |        136 |        431 |      2,104 |
+| Markdown |          7 |        317 |          0 |        106 |        423 |
+| XML      |          5 |         73 |          0 |         19 |         92 |
+| JSON     |          3 |         60 |          0 |          3 |         63 |
+| HTTP     |          3 |         32 |          0 |         10 |         42 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                        | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                           |         81 |      2,019 |        136 |        569 |      2,724 |
+| . (Files)                                                                                                                                   |          3 |        246 |          0 |         77 |        323 |
+| Docs                                                                                                                                        |          4 |         71 |          0 |         29 |        100 |
+| Docs (Files)                                                                                                                                |          2 |         11 |          0 |         13 |         24 |
+| Docs\Domain Models                                                                                                                          |          2 |         60 |          0 |         16 |         76 |
+| MemberInfo.Api                                                                                                                              |         18 |        489 |         39 |        114 |        642 |
+| MemberInfo.Api (Files)                                                                                                                      |          5 |         80 |          1 |         21 |        102 |
+| MemberInfo.Api\Common                                                                                                                       |          7 |        207 |          3 |         48 |        258 |
+| MemberInfo.Api\Common\Errors                                                                                                                |          1 |         81 |          1 |         20 |        102 |
+| MemberInfo.Api\Common\Filters                                                                                                               |          1 |         26 |          0 |          5 |         31 |
+| MemberInfo.Api\Common\Http                                                                                                                  |          1 |          9 |          0 |          3 |         12 |
+| MemberInfo.Api\Common\Mapping                                                                                                               |          4 |         91 |          2 |         20 |        113 |
+| MemberInfo.Api\Controllers                                                                                                                  |          5 |        171 |         35 |         44 |        250 |
+| MemberInfo.Api\Properties                                                                                                                   |          1 |         31 |          0 |          1 |         32 |
+| MemberInfo.Application                                                                                                                      |         16 |        359 |          8 |        101 |        468 |
+| MemberInfo.Application (Files)                                                                                                              |          2 |         33 |          0 |          7 |         40 |
+| MemberInfo.Application\Authentication                                                                                                       |          7 |        144 |          0 |         34 |        178 |
+| MemberInfo.Application\Authentication\Commands                                                                                              |          3 |         78 |          0 |         15 |         93 |
+| MemberInfo.Application\Authentication\Commands\Register                                                                                     |          3 |         78 |          0 |         15 |         93 |
+| MemberInfo.Application\Authentication\Common                                                                                                |          1 |          5 |          0 |          3 |          8 |
+| MemberInfo.Application\Authentication\Queries                                                                                               |          3 |         61 |          0 |         16 |         77 |
+| MemberInfo.Application\Authentication\Queries\Login                                                                                         |          3 |         61 |          0 |         16 |         77 |
+| MemberInfo.Application\Common                                                                                                               |          1 |         32 |          1 |          9 |         42 |
+| MemberInfo.Application\Common\Behaviors                                                                                                     |          1 |         32 |          1 |          9 |         42 |
+| MemberInfo.Application\Customers                                                                                                            |          3 |         86 |          3 |         29 |        118 |
+| MemberInfo.Application\Customers\Commands                                                                                                   |          3 |         86 |          3 |         29 |        118 |
+| MemberInfo.Application\Products                                                                                                             |          3 |         64 |          4 |         22 |         90 |
+| MemberInfo.Application\Products\Commands                                                                                                    |          3 |         64 |          4 |         22 |         90 |
+| MemberInfo.Application\Products\Commands\CreateProduct                                                                                      |          3 |         64 |          4 |         22 |         90 |
+| MemberInfo.Contracts                                                                                                                        |          8 |         98 |          4 |         35 |        137 |
+| MemberInfo.Contracts (Files)                                                                                                                |          1 |          7 |          0 |          3 |         10 |
+| MemberInfo.Contracts\Authentication                                                                                                         |          3 |         35 |          0 |         10 |         45 |
+| MemberInfo.Contracts\Customers                                                                                                              |          2 |         34 |          1 |         10 |         45 |
+| MemberInfo.Contracts\Products                                                                                                               |          2 |         22 |          3 |         12 |         37 |
+| MemberInfo.Domain                                                                                                                           |         20 |        437 |         40 |        139 |        616 |
+| MemberInfo.Domain (Files)                                                                                                                   |          1 |         10 |          0 |          4 |         14 |
+| MemberInfo.Domain\Common                                                                                                                    |          9 |        127 |          1 |         40 |        168 |
+| MemberInfo.Domain\Common\Errors                                                                                                             |          3 |         64 |          0 |         21 |         85 |
+| MemberInfo.Domain\Common\Interfaces                                                                                                         |          6 |         63 |          1 |         19 |         83 |
+| MemberInfo.Domain\Common\Interfaces\Authentication                                                                                          |          1 |         10 |          0 |          3 |         13 |
+| MemberInfo.Domain\Common\Interfaces\Persistence                                                                                             |          3 |         35 |          1 |         13 |         49 |
+| MemberInfo.Domain\Common\Interfaces\Services                                                                                                |          2 |         18 |          0 |          3 |         21 |
+| MemberInfo.Domain\Entities                                                                                                                  |          1 |         14 |          0 |          3 |         17 |
+| MemberInfo.Domain\Models                                                                                                                    |          3 |         77 |         35 |         41 |        153 |
+| MemberInfo.Domain\Persons                                                                                                                   |          3 |        117 |          0 |         25 |        142 |
+| MemberInfo.Domain\Persons (Files)                                                                                                           |          1 |         65 |          0 |          6 |         71 |
+| MemberInfo.Domain\Persons\ValueObjects                                                                                                      |          2 |         52 |          0 |         19 |         71 |
+| MemberInfo.Domain\Products                                                                                                                  |          3 |         92 |          4 |         26 |        122 |
+| MemberInfo.Domain\Products (Files)                                                                                                          |          1 |         47 |          0 |          8 |         55 |
+| MemberInfo.Domain\Products\ValueObjects                                                                                                     |          2 |         45 |          4 |         18 |         67 |
+| MemberInfo.Infrastructure                                                                                                                   |          9 |        287 |         45 |         64 |        396 |
+| MemberInfo.Infrastructure (Files)                                                                                                           |          3 |        118 |          0 |         26 |        144 |
+| MemberInfo.Infrastructure\Authentication                                                                                                    |          2 |         52 |          0 |          8 |         60 |
+| MemberInfo.Infrastructure\Persistence                                                                                                       |          3 |        111 |         45 |         27 |        183 |
+| MemberInfo.Infrastructure\Services                                                                                                          |          1 |          6 |          0 |          3 |          9 |
+| Requests                                                                                                                                    |          3 |         32 |          0 |         10 |         42 |
+| Requests\Authorization                                                                                                                      |          2 |         16 |          0 |          7 |         23 |
+| Requests\Product                                                                                                                            |          1 |         16 |          0 |          3 |         19 |
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                                    | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Docs\Domain Models\Aggregates.Person.md                                                         | Markdown |         39 |          0 |          9 |         48 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Docs\Domain Models\Aggregates.ProductRequest.md                                                 | Markdown |         21 |          0 |          7 |         28 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Docs\Questions.md                                                                               | Markdown |          0 |          0 |          1 |          1 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Docs\Todo.md                                                                                    | Markdown |         11 |          0 |         12 |         23 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Errors\CustomProblemDetailsFactory.cs                                     | C#       |         81 |          1 |         20 |        102 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Filters\ErrorsHandlingFeatureAttribute.cs                                 | C#       |         26 |          0 |          5 |         31 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Http\HttpErrorTypes.cs                                                    | C#       |          9 |          0 |          3 |         12 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Mapping\AuthenticationMappingConfig.cs                                    | C#       |         16 |          0 |          5 |         21 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Mapping\CustomerMappingConfig.cs                                          | C#       |         33 |          1 |          7 |         41 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Mapping\DependencyInjection.cs                                            | C#       |         19 |          0 |          5 |         24 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Common\Mapping\ProductMappingConfig.cs                                           | C#       |         23 |          1 |          3 |         27 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Controllers\ApiController.cs                                                     | C#       |         53 |          0 |         10 |         63 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Controllers\AuthenticationController.cs                                          | C#       |         42 |          0 |         12 |         54 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Controllers\CustomerController.cs                                                | C#       |         29 |         26 |          7 |         62 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Controllers\ErrorsController.cs                                                  | C#       |         20 |          0 |          4 |         24 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Controllers\ProductsController.cs                                                | C#       |         27 |          9 |         11 |         47 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\DependencyInjection.cs                                                           | C#       |         14 |          1 |          3 |         18 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\MemberInfo.Api.csproj                                                            | XML      |         19 |          0 |          7 |         26 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Program.cs                                                                       | C#       |         18 |          0 |          9 |         27 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\Properties\launchSettings.json                                                   | JSON     |         31 |          0 |          1 |         32 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\appsettings.Development.json                                                     | JSON     |         14 |          0 |          1 |         15 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Api\appsettings.json                                                                 | JSON     |         15 |          0 |          1 |         16 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Commands\Register\RegisterCommand.cs                      | C#       |         15 |          0 |          3 |         18 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Commands\Register\RegisterCommandHandler.cs               | C#       |         41 |          0 |         10 |         51 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Commands\Register\RegisterCommandValidator.cs             | C#       |         22 |          0 |          2 |         24 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Common\AuthenticationResult.cs                            | C#       |          5 |          0 |          3 |          8 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Queries\Login\LoginQuery.cs                               | C#       |          9 |          0 |          3 |         12 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Queries\Login\LoginQueryHandler.cs                        | C#       |         34 |          0 |         11 |         45 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Authentication\Queries\Login\LoginQueryValidator.cs                      | C#       |         18 |          0 |          2 |         20 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Common\Behaviors\ValidationBehavior.cs                                   | C#       |         32 |          1 |          9 |         42 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Customers\Commands\CreateCustomerCommand.cs                              | C#       |         17 |          1 |         12 |         30 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Customers\Commands\CreateCustomerCommandHandler.cs                       | C#       |         44 |          2 |         15 |         61 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Customers\Commands\CustomerCommandValidator.cs                           | C#       |         25 |          0 |          2 |         27 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\DependencyInjection.cs                                                   | C#       |         16 |          0 |          2 |         18 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\MemberInfo.Application.csproj                                            | XML      |         17 |          0 |          5 |         22 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Products\Commands\CreateProduct\CreateProductCommand.cs                  | C#       |         13 |          1 |          5 |         19 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Products\Commands\CreateProduct\CreateProductCommandHandler.cs           | C#       |         36 |          3 |         14 |         53 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Application\Products\Commands\CreateProduct\CreateProductCommandHandlerValidatior.cs | C#       |         15 |          0 |          3 |         18 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Authentication\AuthenticationResponse.cs                                   | C#       |         13 |          0 |          4 |         17 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Authentication\LoginRequest.cs                                             | C#       |         10 |          0 |          3 |         13 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Authentication\RegisterRequest.cs                                          | C#       |         12 |          0 |          3 |         15 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Customers\CustomerRegisterRequest.cs                                       | C#       |         15 |          1 |          4 |         20 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Customers\CustomerRegisterResponse.cs                                      | C#       |         19 |          0 |          6 |         25 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\MemberInfo.Contracts.csproj                                                | XML      |          7 |          0 |          3 |         10 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Products\CreateProductRequest.cs                                           | C#       |         12 |          3 |          5 |         20 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Contracts\Products\ProductResponse.cs                                                | C#       |         10 |          0 |          7 |         17 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Errors\Errors.Authentication.cs                                        | C#       |         18 |          0 |          4 |         22 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Errors\Errors.NullReference.cs                                         | C#       |         26 |          0 |          9 |         35 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Errors\Errors.User.cs                                                  | C#       |         20 |          0 |          8 |         28 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Authentication\IJwtTokenGenerator.cs                        | C#       |         10 |          0 |          3 |         13 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Persistence\ICustomerRepository.cs                          | C#       |         13 |          0 |          2 |         15 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Persistence\IProductRepository.cs                           | C#       |          7 |          0 |          4 |         11 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Persistence\IUserRepository.cs                              | C#       |         15 |          1 |          7 |         23 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Services\IDateTimeProvider.cs                               | C#       |          5 |          0 |          2 |          7 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Common\Interfaces\Services\IDbContext.cs                                      | C#       |         13 |          0 |          1 |         14 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Entities\User.cs                                                              | C#       |         14 |          0 |          3 |         17 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\MemberInfo.Domain.csproj                                                      | XML      |         10 |          0 |          4 |         14 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Models\AggregateRoot.cs                                                       | C#       |         12 |          8 |          8 |         28 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Models\Entity.cs                                                              | C#       |         29 |         16 |         14 |         59 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Models\ValueObject.cs                                                         | C#       |         36 |         11 |         19 |         66 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Persons\Person.cs                                                             | C#       |         65 |          0 |          6 |         71 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Persons\ValueObjects\Expiration.cs                                            | C#       |         30 |          0 |          9 |         39 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Persons\ValueObjects\PersonId.cs                                              | C#       |         22 |          0 |         10 |         32 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Products\Product.cs                                                           | C#       |         47 |          0 |          8 |         55 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Products\ValueObjects\Price.cs                                                | C#       |         21 |          4 |          8 |         33 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Domain\Products\ValueObjects\ProductId.cs                                            | C#       |         24 |          0 |         10 |         34 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Authentication\JwtSettings.cs                                         | C#       |         13 |          0 |          3 |         16 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Authentication\JwtTokenGenerator.cs                                   | C#       |         39 |          0 |          5 |         44 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\DbContext.cs                                                          | C#       |         45 |          0 |         16 |         61 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\DependencyInjection.cs                                                | C#       |         53 |          0 |         10 |         63 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\MemberInfo.Infrastructure.csproj                                      | XML      |         20 |          0 |          0 |         20 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Persistence\CustomerRepository.cs                                     | C#       |         35 |          0 |          8 |         43 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Persistence\ProductRepository.cs                                      | C#       |         23 |          0 |          5 |         28 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Persistence\UserRepository.cs                                         | C#       |         53 |         45 |         14 |        112 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\MemberInfo.Infrastructure\Services\DateTimeProvider.cs                                          | C#       |          6 |          0 |          3 |          9 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\RealToDo.md                                                                                     | Markdown |        127 |          0 |         44 |        171 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Requests.md                                                                                     | Markdown |         65 |          0 |         30 |         95 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Requests\Authorization\Login.http                                                               | HTTP     |          7 |          0 |          4 |         11 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Requests\Authorization\Register.http                                                            | HTTP     |          9 |          0 |          3 |         12 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Requests\Product\CreateProduct.http                                                             | HTTP     |         16 |          0 |          3 |         19 |
+| c:\Users\ibrah\GitRepos\GymMembershipWebApi\Response.md                                                                                     | Markdown |         54 |          0 |          3 |         57 |
+| Total                                                                                                                                       |          |      2,019 |        136 |        569 |      2,724 |
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

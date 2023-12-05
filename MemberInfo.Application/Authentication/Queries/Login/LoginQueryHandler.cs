@@ -21,17 +21,25 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<UserResult>
     public async Task<ErrorOr<UserResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        if (_userRepository.GetUserByEmail(query.Email) is not User user)
-        {
-            return Errors.Authentication.InvalidCredentials;
-        }
 
-        if (user.Password != query.Password)
+        var userIsValid = _userRepository.IsEmailValid(query.Email).Result switch
         {
-            return Errors.Authentication.InvalidCredentials;
-        }
-
+            true => _userRepository.IsEmailValid(query.Email).Result,
+            _ => throw new Exception("User not found")
+        };
+        
+        User user = _userRepository.GetUserByEmail(query.Email).Result;
         var token = _jwtTokenGenerator.GenerateToken(user);
+        if (user.Token != query.Password) // TODO: Hash password
+        {
+            return Errors.Authentication.InvalidCredentials;
+        }
+        // TODO: Store token in redis.
+
+        // TODO: Return token and user.
+
+        // Check if token matches users token in redis.
+
 
         return new UserResult(
             user,

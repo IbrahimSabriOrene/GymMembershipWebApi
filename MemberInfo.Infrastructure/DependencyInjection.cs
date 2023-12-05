@@ -1,3 +1,5 @@
+using System.Data;
+using System.Data.Common;
 using System.Text;
 using Customer.Domain.Common.Interfaces.Authentication;
 using Customer.Domain.Common.Interfaces.Persistence;
@@ -6,6 +8,8 @@ using Customer.Infrastructure.Authentication;
 using Customer.Infrastructure.Persistence;
 using Customer.Infrastructure.Services;
 using MemberInfo.Domain.Common.Interfaces.Persistence;
+using MemberInfo.Domain.Common.Interfaces.Services;
+using MemberInfo.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +33,7 @@ public static class DependencyInjection
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<ICustomerRepository, CustomerRepository>();
+        services.AddScoped<IDbContext, DbContext>();
         return services;
 
     }

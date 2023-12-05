@@ -23,5 +23,12 @@ public static partial class Errors
       description: description);
   }
 
+  public static Error ResultNull(string description)
+  {
+    return Error.NotFound(
+      code: "TResult.NotFound",
+      description: description);
+  }
+
 
 }

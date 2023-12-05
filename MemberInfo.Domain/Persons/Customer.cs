@@ -9,7 +9,7 @@ using Customer.Domain.Products.ValueObjects;
 
 namespace Customer.Domain.Person
 {
-    public sealed class Person : AggregateRoot<PersonId>
+    public sealed class Customer : AggregateRoot<PersonId>
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
@@ -20,7 +20,7 @@ namespace Customer.Domain.Person
         public Expiration? Expiration { get; private set; }
         public ProductId ProductId { get; private set; }
 
-        public Person(
+        public Customer(
             PersonId personId,
             string firstName,
             string lastName,
@@ -42,7 +42,7 @@ namespace Customer.Domain.Person
             ProductId = productId;
         }
 
-        public static Person Create(
+        public static Customer Create(
             string firstName,
             string lastName,
             string email,
@@ -52,7 +52,7 @@ namespace Customer.Domain.Person
         {
 
             var personId = PersonId.CreateUnique(); // We are creating the guid id in here this is not good 
-            var person = new Person(
+            var person = new Customer(
                 personId: personId,
                 firstName: firstName,
                 lastName: lastName,

@@ -15,7 +15,7 @@ namespace Customer.Infrastructure.Persistence
 
     public class CustomerRepository : ICustomerRepository
     {
-        private static readonly List<Person> _person = new();
+        private static readonly List<Domain.Person.Customer> _person = new();
         private readonly IConfiguration _config;
 
         public CustomerRepository(IConfiguration config)
@@ -23,12 +23,12 @@ namespace Customer.Infrastructure.Persistence
             _config = config;
         }
 
-        public void Add(Person person)
+        public void Add(Domain.Person.Customer person)
         {
             _person.Add(person);
         }
 
-        public Person? FindById(PersonId personId)
+        public Domain.Person.Customer? FindById(PersonId personId)
         {
             if (personId is null)
             {
