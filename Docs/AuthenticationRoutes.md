@@ -1,4 +1,6 @@
+This is a boilerplate project for authentication and authorization in ASP.NET Core 6 with JWT and refresh tokens. It will include the following features shown below. The project is currently in the early stages of development. The following features are planned to be implemented in the future:
 ### Routes Overview
+
 [SRC-1 hash-and-verify-password](https://jasonwatmore.com/post/2022/01/16/net-6-hash-and-verify-passwords-with-bcrypt)
 [SRC-2 Email-Authentication-ForgotPass](https://jasonwatmore.com/post/2022/02/26/net-6-boilerplate-api-tutorial-with-email-sign-up-verification-authentication-forgot-password)
 
