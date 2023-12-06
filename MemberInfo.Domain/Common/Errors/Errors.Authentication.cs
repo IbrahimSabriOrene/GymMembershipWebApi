@@ -17,5 +17,7 @@ public static partial class Errors
         public static Error InvalidToken => Error.Conflict(
             code: "Authentication.InvalidToken",
             description: "The token provided is invalid.");
+
+        
     }
 }

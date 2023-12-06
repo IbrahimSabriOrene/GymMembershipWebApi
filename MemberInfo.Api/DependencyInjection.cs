@@ -12,6 +12,12 @@ public static class DependencyInjection
         services.AddControllers();
         services.AddMappings();
         services.AddSingleton<ProblemDetailsFactory, CustomProblemDetailsFactory>();
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new() { Title = "Customer.Api", Version = "v1" });
+        });
         return services;
     }
 }

@@ -1,10 +1,11 @@
 @host = https://localhost:7140
-
-POST {{host}}/auth/login
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZjZiYzU0NS02NDcxLTRkOTMtODUwNi04N2JkOWFjOTVjNmEiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI0MTlmZDIzYi0zYWE3LTQ2NWQtODA0OS0wNzgxY2Q4MDFhNmIiLCJleHAiOjE3MDE4MzI1MzcsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.bgqVFWVXV57h_xKglo8GMm008p47bBIBxrTtquaZPNo
+POST {{host}}/api/authentication/login
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "email":"ibrahimoreen@wyandex.com",
+    "email":"Yarrakada@yarrda.com",
     "password":"123456"
 }
 

@@ -9,14 +9,10 @@ namespace Customer.Domain.Common.Interfaces.Persistence;
 
 public interface IUserRepository
 {
-    Task<bool> IsEmailValid(string email);
+    Task<bool> IsUserExists(string email);
     Task <User> GetUserByEmail(string email);
-    Task<bool> CreateUser(User user);
-    Task<bool> DeleteUser(Guid id);
-    Task<bool> ChangeFirstName(User user);
-    Task<bool> ChangeLastName(User user);
-    Task<bool> ChangeEmail(User user);
-    
+    Task CreateUser(User user);
+    Task<int> DeleteUser(Guid id);
 
     //Store token in redis.
 

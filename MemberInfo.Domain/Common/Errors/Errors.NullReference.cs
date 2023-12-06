@@ -31,4 +31,12 @@ public static partial class Errors
   }
 
 
+  public static Error ResultNull<T>(string code, string description)
+  {
+    return Error.NotFound(
+      code: $"{typeof(T).Name}.{code}",
+      description: description);
+  }
+
+
 }

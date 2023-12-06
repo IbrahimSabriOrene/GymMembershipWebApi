@@ -16,5 +16,7 @@
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0"/>
     <PackageReference Include="MediaTR" Version="12.1.1"/>
     <PackageReference Include="Dapper" Version="2.1.24"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
   </ItemGroup>
 </Project>

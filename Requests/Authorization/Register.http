@@ -1,11 +1,11 @@
 @host = https://localhost:7140
 
-POST {{host}}/auth/register
+POST {{host}}/api/authentication/register
 Content-Type: application/json
 
 {
     "firstname":"153",
     "lastname":"123",
-    "email":"1@nwyandex.com",
+    "email":"Yarrakada@yarrda.com",
     "password":"123456"
 }

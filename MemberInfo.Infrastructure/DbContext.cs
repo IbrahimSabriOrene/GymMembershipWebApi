@@ -1,10 +1,8 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
-using Customer.Domain.Entities;
 using Dapper;
 using MemberInfo.Domain.Common.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Identity.Client;
 
 namespace MemberInfo.Infrastructure
 {
@@ -32,18 +30,16 @@ namespace MemberInfo.Infrastructure
 
             try
             {
-                using var connection = new SqlConnection(_builder.ConnectionString);
-                connection.Open();
+                _dbConnection = new SqlConnection(_builder.ConnectionString);
+                _dbConnection.Open();
             }
-
             catch (SqlException e)
             {
-                Console.WriteLine(e.ToString());
+                // We should log this
+                // Create Logger and Custom Exception
+                Console.WriteLine(e);
+                throw;
             }
-
-            _dbConnection = new SqlConnection(_builder.ConnectionString);
-            _dbConnection.Open();
-
             
         }
         public async Task<T> GetAsync<T>(string sql, object parameters)
@@ -52,14 +48,14 @@ namespace MemberInfo.Infrastructure
             return result;
         }
 
-        public async Task<bool> EditDataAsync(string sql, object parameters)
+        public async Task<int> EditDataAsync(string sql, object parameters)
         {
-            var result = await _dbConnection.ExecuteAsync(sql, parameters);
-            if (result == 0)
-            {
-                throw new Exception("No data found"); // TODO: Create custom exception
-            }
-            return true;
+            var result = await _dbConnection.ExecuteScalarAsync<int>(sql, parameters);
+           // if (result == 0)
+           // {
+           //     throw new Exception("No data found"); // TODO: Create custom exception
+           // }
+            return result;
         }
 
     }

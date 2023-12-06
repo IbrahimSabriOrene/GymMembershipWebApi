@@ -4,10 +4,9 @@ using MapsterMapper;
 using Customer.Contracts.Customers;
 using MemberInfo.Application.Customers.Commands;
 using ErrorOr;
-using Customer.Domain.Person;
 namespace Customer.Api.Controllers;
 
-
+using Customer = Domain.Person.Customer;
 [Route("/customer")]
 
 public class CustomerController : ApiController
@@ -24,7 +23,7 @@ public class CustomerController : ApiController
     public async Task<IActionResult> CreateUser(CustomerRegisterRequest request)
     {
         var command = _mapper.Map<CreateCustomerCommand>(request);
-        ErrorOr<Domain.Person.Customer> CreateCustomerResult = await _mediator.Send(command);
+        ErrorOr<Customer> CreateCustomerResult = await _mediator.Send(command);
         return CreateCustomerResult.Match(
             customer => Ok(_mapper.Map<CustomerRegisterResponse>(customer)),
             error => Problem(error)

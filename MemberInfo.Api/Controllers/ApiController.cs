@@ -11,6 +11,7 @@ namespace Customer.Api.Controllers;
 [Authorize]
 public class ApiController : ControllerBase
 {
+    [NonAction]
     protected IActionResult Problem(List<Error> errors)
     {
         if (errors.Count is 0)
@@ -31,7 +32,8 @@ public class ApiController : ControllerBase
 
     }
 
-    private IActionResult Problem(Error error)
+    [NonAction]
+    private IActionResult Problem( Error error)
     {
         var statusCode = error.Type switch
         {
@@ -48,6 +50,7 @@ public class ApiController : ControllerBase
             );
     }
 
+    [NonAction]
     private IActionResult ValidationProblem(List<Error> errors)
     {
         var modelStateDictionary = new ModelStateDictionary();
@@ -59,4 +62,5 @@ public class ApiController : ControllerBase
         }
         return ValidationProblem(modelStateDictionary);
     }
+
 }

@@ -214,3 +214,28 @@ LMAO Remember to change neovim's repository. You literally tried to push your ow
 
 
 Create the mdf file, include it into your workspace. 
+
+
+--12/05 todo list
+
+Use redis jwt token store&refreshjwt
+
+
+
+
+Add Password Hashing.
+
+complete db connections
+
+complete controller's functions
+
+write unit tests.
+
+till next sunday.
+
+TODO2: Remove passwordHashResponse from user
+
+
+Some error handling to add:
+
+Invalid email or password -> Invalid Credentials.
