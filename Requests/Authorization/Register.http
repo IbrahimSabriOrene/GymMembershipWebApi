@@ -1,13 +1,8 @@
 @host = https://localhost:7140
-<<<<<<< HEAD
 @token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3ZTJlMzA4Zi00OGMyLTQxMmMtYWRjYS05MTIzNTk1YmY1OWQiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiI3MDEwYWE0NS00YTNjLTQzNTAtOWEzOS05MmUyMmE4M2MyZjMiLCJleHAiOjE3MDEzNzU3OTcsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.hIfh1gvxP9ARJQvyB5t6WkVrATi7ieGbo78g17SKzH8
 POST {{host}}/auth/register
-=======
-
-POST {{host}}/api/authentication/register
->>>>>>> v1.2
 Content-Type: application/json
-Authorization: Baere {{token}}
+Authorization: Bearer {{token}}
 {
     "firstname":"153",
     "lastname":"123",

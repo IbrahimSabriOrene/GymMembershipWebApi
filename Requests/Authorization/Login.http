@@ -6,11 +6,7 @@ Authorization: Bearer {{token}}
 
 
 {
-<<<<<<< HEAD
-    "email":"ib2rwh32425imr23465352ene@wyandex.com",
-=======
     "email":"exampleemail@emailservice.com",
->>>>>>> v1.2
     "password":"123456"
 }
 
