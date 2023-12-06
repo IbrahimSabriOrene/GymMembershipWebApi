@@ -10,7 +10,7 @@ namespace MemberInfo.Domain.Common.Interfaces.Persistence;
 
 public interface ICustomerRepository
 {
-    void Add(Person person);
-    Person? FindById(PersonId personId);
-    bool Exists(ProductId productId);
-}
+    void Add(Customer.Domain.Person.Customer person);
+    Customer.Domain.Person.Customer? FindById(PersonId personId);
+    
+    }

@@ -11,6 +11,7 @@ public record AuthenticationResponse
     string FirstName,
     string LastName,
     string Email,
+    string PasswordHash,
     string Token
 
 );

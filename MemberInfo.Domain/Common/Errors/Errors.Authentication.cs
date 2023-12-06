@@ -13,5 +13,11 @@ public static partial class Errors
         public static Error InvalidCredentials => Error.Conflict(
             code: "Authentication.InvalidCred",
             description: "The credentials provided are invalid.");
+
+        public static Error InvalidToken => Error.Conflict(
+            code: "Authentication.InvalidToken",
+            description: "The token provided is invalid.");
+
+        
     }
 }

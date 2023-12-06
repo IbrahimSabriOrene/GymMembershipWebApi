@@ -8,4 +8,4 @@ public record LoginQuery
 (
     string Email,
     string Password
-) : IRequest<ErrorOr<UserResult>>;
+) : IRequest<ErrorOr<AuthenticationResult>>;

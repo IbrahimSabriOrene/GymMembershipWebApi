@@ -1,6 +1,10 @@
 @host = https://localhost:7140
 @personId = cd3e5fc5-2a88-44fd-aed6-095965df4635
+<<<<<<< HEAD
 @token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3ZTJlMzA4Zi00OGMyLTQxMmMtYWRjYS05MTIzNTk1YmY1OWQiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiIxMTgyMDQ0NC03YzMzLTRmOWQtODk0MS03ZTc0MTAzNGI3NmYiLCJleHAiOjE3MDEzNzU5MDEsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.my0iEGS_P8eC_IFaiAiP6374TNcZ3MF7GgllTvory4U
+=======
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNmIwMzJlYi1jOTYyLTQxZWItYmRmYi1jNWU4YzBhOTkzOTQiLCJnaXZlbl9uYW1lIjoiMTUzIiwiZmFtaWx5X25hbWUiOiIxMjMiLCJqdGkiOiJlYTk3YjNmMS0wMTNlLTQ0YjEtYjFlNS04N2U4ODgyYTdhOWYiLCJleHAiOjE3MDE4MTcwMTAsImlzcyI6Ik1lbWJlckluZm9NZW1iZXJJbmZvIiwiYXVkIjoiTWVtYmVySW5mbyJ9.EAU2avNOsJ_WDGp9WEAaZFg5s2Un_IZ95JjlekdoQO0
+>>>>>>> v1.2
 
 POST https://localhost:7140/products/createProduct
 Content-Type: application/json
@@ -8,19 +12,12 @@ Authorization: Bearer {{token}}
 
 
 {
-    "ProductName": "Product 2",
+    "ProductName": "3 Months Subscription",
     "Price": [
         {
-            "Amount": 10123150,
+            "Amount": 1200,
             "Currency": "USD"
         }
     ],
-    "Months": 12,
-    "PersonIds": [
-        {
-            "Id": "cd3e5fc2-2a88-44fd-aed6-0959652f4635"
-            //if id is different add inside the array
-            //get product
-        }
-    ]
+    "Months": 3
 }

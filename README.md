@@ -1,59 +1,73 @@
-# Product API
-```json 
-{
-  "productId": "bdc38fb0-4586-4bed-afdd-37d2248d8e37",
-  "productName": "Product 2",
-  "price": [
-    {
-      "amount": 10123150,
-      "currency": "USD"
-    }
-  ],
-  "months": 12,
-  "creationDate": "2023-10-30T02:58:04.4309434Z",
-  "lastUpdateDate": "2023-10-30T02:58:04.4309441Z",
-  "personId": [
-    {
-      "id": "cd3e5fc5-2a88-44fd-aed6-0959652f4635"
-    }
-  ]
-}
+### Gym Membership Web Api Project Sample.
+
+This project's main goal was learning Domain Driven Design (DDD) and Clean Architecture. It is a sample project that implements a Gym Membership Web Api. It is a simple project that has a few endpoints to manage gym memberships. It is a work in progress and will be updated as I learn more about DDD and Clean Architecture.
+
+Visit <a href="/Docs/">docs</a> folder for more information about the project.
+
+## Technologies
+
+- .NET 6
+- ASP.NET Core 6.0.320
+- CQRS
+- Dapper
+- MediatR
+- ErrorOr
+- FluentValidation
+- Mapper"
+- Swagger
+- Bcrypt
+- JWT
+- Redis (Ongoing)
+
+
+## Features
+
+- [x] DDD (Domain Driven Design)
+- [x] Clean Architecture
+- [x] CQRS (Command Query Responsibility Segregation)
+- [x] Database Sql Express Server 2019
+- [x] Repository Pattern (Dapper)
+- [ ] Redis Cache <- Ongoing -> 
+
+
+## Getting Started
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/IbrahimSabriOrene/GymMembershipWebApi.git
+
+    ```
+
+2. Run the project
+    ```sh
+    dotnet run --project .\MemberInfo.Api\
+    ```
+
+## Usage
+
+### Swagger
+
+```sh
+    https://localhost:{{port}}/swagger/index.html
 ```
 
-```json
+## Http Request
+```text
 
-Person Api
-{
-  "personId": "cd3e5fc5-2a88-44fd-aed6-0959652f4635",
-  "firstName": "Person 1",
-  "lastName": "Person 1",
-  "email": "",
-    "phoneNumber": "",
-    "address": "",
-    "creationDate": "2023-10-30T02:58:04.4309434Z",
-    "lastUpdateDate": "2023-10-30T02:58:04.4309441Z",
-    "products": [
-        {
-            "productId": "bdc38fb0-4586-4bed-afdd-37d2248d8e37"
-        }
-    ]
+    Go to the Request folder and import the requests to Postman
+```
+## Roadmap
 
-}
+Currently, the project is in the early stages of development. The following features are planned to be implemented in the future:
 
-
-routes we need.
-
-Create Product.
-Get Product.
-Get Product by Id.
-Update Product.
-Delete Product by Id.
-
-Create Person.
-Get Person by Id.
-Update Person.
-Delete Person by Id.
-
-Make sure that the person has a list of products.
-
-
+- [ ] Redis Cache
+- [ ] Unit Tests
+- [ ] Integration Tests
+- [ ] Docker
+- [ ] Kubernetes
+- [ ] CI/CD
+- [ ] Frontend (Angular, React, Vue)
+- [ ] Mobile App (Xamarin, Flutter)
+- [ ] Desktop App (WPF, WinForms)

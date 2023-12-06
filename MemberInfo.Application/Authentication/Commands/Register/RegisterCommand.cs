@@ -14,4 +14,4 @@ public record RegisterCommand
     string Password,
     string FirstName,
     string LastName
-) : IRequest<ErrorOr<UserResult>>;
+) : IRequest<ErrorOr<AuthenticationResult>>;

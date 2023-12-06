@@ -9,7 +9,7 @@ using Customer.Domain.Common.Errors;
 
 namespace MemberInfo.Application.Customers.Commands
 {
-    public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, ErrorOr<Person>>
+    public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, ErrorOr<Customer.Domain.Person.Customer>>
     {
         private readonly ICustomerRepository _customerRepository;
         private readonly IProductRepository _productRepository;
@@ -20,23 +20,29 @@ namespace MemberInfo.Application.Customers.Commands
             _productRepository = productRepository;
         }
 
-        public async Task<ErrorOr<Person>> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
+        public async Task<ErrorOr<Customer.Domain.Person.Customer>> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
         {
 
 
-            Product? product = _productRepository.FindById(command.Value);
+            Product? product = _productRepository.FindById(command.ProductId);
             if (product is null)
             {
                 return Errors.NullReference.ProductNotFound("Product not found");
             }
             var productId = product.Id;
-            var currentDate = DateTime.UtcNow;
+            var currentDate = DateTime.Now;
             var months = product.Months;
 
 
+<<<<<<< HEAD
 
             var expirationDate = Product.GetExpirationDate(months, currentDate);
             var personTask = Task.Run(() => Person.Create(
+=======
+        // ExpirationDate will be increasable by months.
+            var expirationDate = currentDate.AddMonths(months);
+            var personTask = Task.Run(() => Customer.Domain.Person.Customer.Create(
+>>>>>>> v1.2
                 firstName: command.FirstName,
                 lastName: command.LastName,
                 email: command.Email,
@@ -48,22 +54,12 @@ namespace MemberInfo.Application.Customers.Commands
 
             var person = await personTask;
 
-
-
-
-
             _customerRepository.Add(person);
 
-            
-
+   
             return person;
 
         }
-
-        // return new CustomerResult(
-        //     person,
-        //     person.Expiration
-        // );
     }
 }
 

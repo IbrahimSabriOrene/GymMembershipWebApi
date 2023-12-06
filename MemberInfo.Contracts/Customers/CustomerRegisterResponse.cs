@@ -14,13 +14,15 @@ public record CustomerRegisterResponse
     string PhoneNumber,
     DateTime CreationDate,
     DateTime? LastUpdateDate,
-    //Expiration date -> Come from product
-    DateTime ExpirationDate, //Not sure about this one, maybe date time.
-    ProductId ProductId // Product Id can may be a guid
+    DateTime ExpirationDate, 
+    Guid ProductId
 
 
 );
 
-public record ProductId(Guid Value);
 
+<<<<<<< HEAD
 public record CustomerId(Guid Value); //Change this to direct Guid Value.
+=======
+public record CustomerId(Guid Value); // This will be flat value in the database like CustomerId = 00000000-0000-0000-0000-000000000000
+>>>>>>> v1.2

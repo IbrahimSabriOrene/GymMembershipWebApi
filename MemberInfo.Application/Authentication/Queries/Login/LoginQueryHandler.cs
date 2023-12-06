@@ -8,7 +8,8 @@ using Customer.Domain.Entities;
 
 namespace Customer.Application.Authentication.Queries.Login;
 
-public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<UserResult>>
+using BC = BCrypt.Net.BCrypt;
+public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
@@ -18,23 +19,38 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<UserResult>
         _userRepository = userRepository;
     }
 
-    public async Task<ErrorOr<UserResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        if (_userRepository.GetUserByEmail(query.Email) is not User user)
+        var userIsValid = _userRepository.IsUserExists(query.Email).Result;
+
+        if (!userIsValid)
         {
             return Errors.Authentication.InvalidCredentials;
         }
-
-        if (user.Password != query.Password)
+        
+        User user = _userRepository.GetUserByEmail(query.Email).Result;
+        var hashedPassword = user.PasswordHash;
+        var verifyPassword = BC.Verify(query.Password, hashedPassword);
+        if (!verifyPassword)
         {
             return Errors.Authentication.InvalidCredentials;
         }
-
         var token = _jwtTokenGenerator.GenerateToken(user);
+       // if (user.Token != query.Password) // TODO: Hash password
+       // {
+       //     return Errors.Authentication.InvalidCredentials;
+       // }
+        // TODO: Store token in redis.
 
-        return new UserResult(
+        // TODO: Return token and user.
+
+        // Check if token matches users token in redis.
+
+
+        return new AuthenticationResult(
             user,
+            hashedPassword,
             token);
     }
 

@@ -1,21 +1,49 @@
 using Customer.Domain.Common.Interfaces.Persistence;
 using Customer.Domain.Entities;
-using Customer.Domain.Products.ValueObjects;
+using MemberInfo.Domain.Common.Interfaces.Services;
 
 namespace Customer.Infrastructure.Persistence;
 
 public class UserRepository : IUserRepository
 {
-    private static readonly List<User> _users = new();
-
-    public void Add(User user)
+    private readonly IDbContext _dbContext;
+    public UserRepository(IDbContext dbContext)
     {
-        _users.Add(user);
+        _dbContext = dbContext;
     }
 
-    public User? GetUserByEmail(string email)
+    public async Task CreateUser(User user)
     {
-        return _users.FirstOrDefault(u => u.Email == email);
+        await _dbContext.EditDataAsync("INSERT INTO dbo.users (id, firstName, lastName, email, passwordHash) VALUES (@id, @firstName, @lastName, @email, @passwordHash)",user);
+
+
     }
 
+    public async Task<int> DeleteUser(Guid id)
+    {
+        var deleteUser = await _dbContext.EditDataAsync("DELETE FROM dbo.users WHERE id=@Id", new { id });
+        return deleteUser;
+    }
+
+    public async Task<bool> IsUserExists(string email)
+    {
+        var userCount = await _dbContext.EditDataAsync("SELECT COUNT(*) FROM dbo.users WHERE email=@email", new { email });
+        if (userCount == 0)
+        {
+            return false;
+        }
+        return true;
+        //if this is true, then the email is and this means that the user already exists
+    }
+
+    public async Task<User> GetUserByEmail(string email)
+    {
+        var user = await _dbContext.GetAsync<User>("SELECT * FROM dbo.users where email=@email",
+            new { email });
+        if (user == null)
+        {
+            throw new Exception("No user found"); //Null exception
+        }
+        return user;
+    }
 }

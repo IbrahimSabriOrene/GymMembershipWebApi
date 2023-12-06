@@ -11,8 +11,8 @@ public record CreateCustomerCommand(
     string LastName,
     string Email,
     string PhoneNumber,
-    Guid Value
-) : IRequest<ErrorOr<Person>>;
+    Guid ProductId
+) : IRequest<ErrorOr<Customer.Domain.Person.Customer>>;
 
 //Add PersonId here.
 
