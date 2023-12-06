@@ -1,10 +1,6 @@
-using System;
-using System.Globalization;
-using Customer.Domain.Common.Interfaces.Persistence;
 using Customer.Domain.Models;
 using Customer.Domain.Person.ValueObjects;
 using Customer.Domain.Persons.ValueObjects;
-using Customer.Domain.Products;
 using Customer.Domain.Products.ValueObjects;
 
 namespace Customer.Domain.Person
